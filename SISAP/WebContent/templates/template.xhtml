@@ -30,9 +30,7 @@
 
 		<p:layout fullPage="true">
 			<p:layoutUnit id="top" position="north">
-				<h:form>
-					<a>Sistema de Apoio Pedagogico</a>
-				</h:form>
+				<h:form></h:form>
 			</p:layoutUnit>
 
 			<p:layoutUnit id="left" position="west" size="260" resizable="false"
@@ -100,12 +98,18 @@
 			</p:layoutUnit>
 
 			<p:layoutUnit id="center" position="center">
-				<h:form>
-					<p:menubar>
-						<p:menuitem value="Home" />
-					</p:menubar>
-				</h:form>
-				<ui:insert name="center" />
+				<p:layout>
+					<p:layoutUnit id="cima" position="north">
+						<h:form>
+							<p:menubar>
+								<p:menuitem value="Home" />
+							</p:menubar>
+						</h:form>
+					</p:layoutUnit>
+					<p:layoutUnit id="centro" position="center">
+						<ui:insert name="center" />
+					</p:layoutUnit>
+				</p:layout>
 			</p:layoutUnit>
 
 			<p:layoutUnit id="bottom" position="south" size="60">
