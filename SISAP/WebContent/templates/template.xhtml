@@ -31,53 +31,74 @@
 		<p:layout fullPage="true">
 			<p:layoutUnit id="top" position="north">
 				<h:form>
-
+					<a>Sistema de Apoio Pedagogico</a>
 				</h:form>
 			</p:layoutUnit>
 
-			<p:layoutUnit id="left" position="west" size="250" resizable="false"
-				closable="false" collapsible="true" minSize="300">
-				<h:form>
-					<center>
-						<img src="../resources/logo.png" height="200px" width="175px" />
-					</center>
-				</h:form>
-				<h:form>
-					<p:panelMenu style="width: 242px">
-						<p:submenu label="Atividade">
-							<p:menuitem value="Atendimento" />
-							<p:menuitem value="Encaminhamento" />
-							<p:menuitem value="Notificação" />
-							<p:menuitem value="Reunião" />
-							<p:menuitem value="Visita Domiciliar" />
-						</p:submenu>
-						<p:submenu label="Diário Pessoal">
-							<p:menuitem value="Registrar" />
-							<p:menuitem value="Visualizar Diário" />
-							<p:menuitem value="Relatório Pessoal" />
-						</p:submenu>
-						<p:submenu label="Conselho de Classe">
-							<p:menuitem value="Bimestral" />
-							<p:menuitem value="Anual" />
-						</p:submenu>
-						<p:submenu label="Núcleo de Aprendizagem">
-							<p:menuitem value="Visualizar Núcleos" />
-							<p:menuitem value="Relatório de Núcleo" />
-						</p:submenu>
-						<p:submenu label="Setor Institucional">
-							<p:menuitem value="Cadastrar" />
-							<p:menuitem value="Visualizar Setores" />
-						</p:submenu>
-						<p:submenu label="Boletim do Aluno">
-							<p:menuitem value="Visualizar Boletim" />
-							<p:menuitem value="Relatório de Boletim" />
-						</p:submenu>
-						<p:submenu label="Sincronização">
-							<p:menuitem value="Realizar Sincronização" />
-							<p:menuitem value="Verificar Estado" />
-						</p:submenu>
-					</p:panelMenu>
-				</h:form>
+			<p:layoutUnit id="left" position="west" size="260" resizable="false"
+				closable="false" collapsible="true" minSize="200">
+				<p:layout>
+					<p:layoutUnit id="topp" position="north">
+						<h:form>
+							<center>
+								<img src="../resources/logo.png" height="175px" width="150px" />
+							</center>
+						</h:form>
+					</p:layoutUnit>
+					<p:layoutUnit id="centerr" position="center">
+						<h:form>
+							<p:panelMenu style="width: 225px">
+								<p:submenu label="Atividade">
+									<p:menuitem value="Atendimento" />
+									<p:menuitem value="Encaminhamento" />
+									<p:menuitem value="Notificação" />
+									<p:menuitem value="Reunião" />
+									<p:menuitem value="Visita Domiciliar" />
+								</p:submenu>
+								<p:submenu label="Diário Pessoal">
+									<p:menuitem value="Registrar" />
+									<p:menuitem value="Visualizar Diário" />
+									<p:menuitem value="Relatório Pessoal" />
+								</p:submenu>
+								<p:submenu label="Conselho de Classe">
+									<p:menuitem value="Bimestral" />
+									<p:menuitem value="Anual" />
+								</p:submenu>
+								<p:submenu label="Núcleo de Aprendizagem">
+									<p:menuitem value="Visualizar Núcleos" />
+									<p:menuitem value="Relatório de Núcleo" />
+								</p:submenu>
+								<p:submenu label="Setor Institucional">
+									<p:menuitem value="Cadastrar" />
+									<p:menuitem value="Visualizar Setores" />
+								</p:submenu>
+								<p:submenu label="Boletim do Aluno">
+									<p:menuitem value="Visualizar Boletim" />
+									<p:menuitem value="Relatório de Boletim" />
+								</p:submenu>
+								<p:submenu label="Sincronização">
+									<p:menuitem value="Realizar Sincronização" />
+									<p:menuitem value="Verificar Estado" />
+								</p:submenu>
+							</p:panelMenu>
+						</h:form>
+					</p:layoutUnit>
+					<p:layoutUnit id="bottomm" position="south">
+						<center>
+							<h:form>
+								<p:button icon="ui-icon-star" title="Icon Only">
+									<f:param name="productId" value="30" />
+								</p:button>
+								<p:button icon="ui-icon-star" title="Icon Only">
+									<f:param name="productId" value="30" />
+								</p:button>
+								<p:button icon="ui-icon-star" title="Icon Only">
+									<f:param name="productId" value="30" />
+								</p:button>
+							</h:form>
+						</center>
+					</p:layoutUnit>
+				</p:layout>
 			</p:layoutUnit>
 
 			<p:layoutUnit id="center" position="center">
