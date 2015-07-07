@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/templates/templateList.xhtml">
+	<ui:define name="title">
+		Biblioteca - Login
+	</ui:define>
+	<ui:define name="center">
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+		<center>
+			<p:panel style="width : 99%; text-align:center">
+				<p:spacer height="30px" />
+				<center>
+					<img src="../resources/logo.png" height="300px" width="239px" />
+				</center>
+				<center>
+					<h:form>
+						<h:panelGrid columns="2" cellpadding="5">
+							<h:outputText value="Login: " />
+							<h:inputText id="login" />
+
+							<h:outputText value="Senha: " />
+							<h:inputSecret id="senha" />
+							<center>
+								<h:panelGrid columns="2" cellpadding="5">
+									<h:button value="Entrar" outcome="/paginas/index.xhtml" />
+									<h:button value="Limpar" />
+								</h:panelGrid>
+							</center>
+						</h:panelGrid>
+					</h:form>
+				</center>
+				<p:spacer height="120px" />
+			</p:panel>
+		</center>
+	</ui:define>
+</ui:composition>
+</html>
