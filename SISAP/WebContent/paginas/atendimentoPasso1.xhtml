@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/template.xhtml">
+
+	<ui:define name="title">
+	SISAP - Atendimento Passo 1/2
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Atendimento Passo 1/2">
+				<h:panelGrid id="resultadoBusca" columns="2"
+					emptyMessage="Nenhum registro encontrado.">
+
+					<div>
+						<h:outputText value="Resultado da Busca" />
+					</div>
+
+					<p:dataTable var="aluno" emptyMessage="Nenhum registro encontrado.">
+						<p:column headerText="Matrícula">
+							<h:outputText value="Matrícula do Aluno" />
+						</p:column>
+
+						<p:column headerText="Nome">
+							<h:outputText value="Nome Completo do Aluno" />
+						</p:column>
+					</p:dataTable>
+					<br />
+					<div>
+						<p:button value="Ver Boletim" icon="ui-icon-search" />
+					</div>
+
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+
+		<br />
+
+		<p:fieldset legend="Ficha de Atendimento">
+			<h:panelGrid id="camposAtendimento1" columns="2">
+
+				<h:outputText value="Solicitante: *" />
+				<p:inputText />
+
+				<h:outputText value="Descrição: *" />
+				<p:inputTextarea rows="2" cols="45" maxlength="10" autoResize="true" />
+
+			</h:panelGrid>
+
+			<h:panelGrid id="camposAtendimento2" columns="4">
+				<h:outputText value="Medidas Anteriores: *" />
+				<p:inputTextarea rows="3" cols="45" maxlength="10" autoResize="true" />
+
+				<h:outputText value="Medidas Posteriores: *" />
+				<p:inputTextarea rows="3" cols="45" maxlength="10" autoResize="true" />
+
+				<br />
+				<br />
+
+				<f:facet name="footer">
+					<p:button value="Continuar" icon="ui-icon-search" />
+
+					<p:commandButton id="limparBotao" value="Limpar"
+						update="camposAtendimento2" process="@this" icon="ui-icon-close">
+						<p:resetInput target="camposAluno" />
+					</p:commandButton>
+					<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+						icon="ui-icon-cancel" />
+				</f:facet>
+			</h:panelGrid>
+		</p:fieldset>
+		<h:form>
+
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
