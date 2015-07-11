@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/template.xhtml">
+
+	<ui:define name="title">
+	SISAP - Atendimento Passo 2/2
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Atendimento Passo 2/2">
+				<h:panelGrid id="resultadoBusca" columns="1">
+
+					<h:outputText style="font-size:16px"
+						value="Deseja realizar encaminhamento deste atendimento?" />
+
+					<p:selectOneRadio id="encaminhamento" value="#{radioView.console}">
+						<f:selectItem itemLabel="Sim" itemValue="Sim" />
+						<f:selectItem itemLabel="Não" itemValue="Nao" />
+					</p:selectOneRadio>
+
+					<h:panelGrid id="selecionarSetor" columns="2">
+						<h:outputText value="Setor: *" />
+
+						<p:selectOneMenu id="setor" value="#{selectOneMenuView.console}"
+							style="width:175px">
+							<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+							<f:selectItem itemLabel="Setor 1" itemValue="setor1" />
+							<f:selectItem itemLabel="Setor 2" itemValue="setor2" />
+							<f:selectItem itemLabel="Setor 3" itemValue="setor3" />
+						</p:selectOneMenu>
+					</h:panelGrid>
+
+					<p:button value="Encaminhar e notificar setor" />
+
+					<br />
+
+					<h:outputText style="font-size:16px"
+						value="Deseja notificar responsável do aluno?" />
+
+					<p:selectOneRadio id="notificacao" value="#{radioView.console}">
+						<f:selectItem itemLabel="Sim" itemValue="Sim" />
+						<f:selectItem itemLabel="Não" itemValue="Nao" />
+					</p:selectOneRadio>
+
+					<h:panelGrid id="notificarResponsavel" columns="2">
+						<h:outputText value="Responsável: *" />
+
+						<p:selectOneMenu id="responsavel"
+							value="#{selectOneMenuView.console}" style="width:175px">
+							<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+							<f:selectItem itemLabel="Pai" itemValue="setor1" />
+							<f:selectItem itemLabel="Mãe" itemValue="setor2" />
+							<f:selectItem itemLabel="Tio" itemValue="setor3" />
+						</p:selectOneMenu>
+
+						<h:outputText value="Forma de envio: *" />
+
+						<p:selectOneMenu id="envio" value="#{selectOneMenuView.console}"
+							style="width:175px">
+							<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+							<f:selectItem itemLabel="Email" itemValue="email" />
+							<f:selectItem itemLabel="SMS" itemValue="sms" />
+							<f:selectItem itemLabel="Ligação" itemValue="ligacao" />
+						</p:selectOneMenu>
+					</h:panelGrid>
+
+					<p:button value="Enviar notificação" icon="ui-icon-search" />
+
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Finalizar atendimento" icon="ui-icon-search" />
+						<p:button value="Voltar" icon="ui-icon-search"
+							outcome="/paginas/atendimentoPasso1.xhtml" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>
