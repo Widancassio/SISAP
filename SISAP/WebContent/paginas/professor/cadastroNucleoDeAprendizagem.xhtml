@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templateProfessor.xhtml">
+
+	<ui:define name="title">
+	SISAP - Cadastrar Núcleo de Aprendizagem
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Cadastro de Novo Núcleo de Aprendizagem">
+				<h:panelGrid id="professorResponsavel" columns="2">
+
+					<h:outputText value="Professor Responsável:" />
+					<h:outputText value="(professor autenticado no sistema)" />
+
+				</h:panelGrid>
+
+				<p:separator />
+
+				<br />
+
+				<h:panelGrid id="camposCadastro" columns="6" style="width:100%">
+
+					<h:outputText value="Série: *" />
+					<p:selectOneMenu id="serie" value="#{selectOneMenuView.console}"
+						style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="1º ano" itemValue="ceara" />
+						<f:selectItem itemLabel="2º ano" itemValue="paraiba" />
+						<f:selectItem itemLabel="3º ano" itemValue="pernambuco" />
+					</p:selectOneMenu>
+
+					<h:outputText value="Curso: *" />
+					<p:selectOneMenu id="curso" value="#{selectOneMenuView.console}"
+						style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="IM" itemValue="ceara" />
+						<f:selectItem itemLabel="MSI" itemValue="paraiba" />
+					</p:selectOneMenu>
+
+					<h:outputText value="Ano letivo: *" />
+					<p:selectOneMenu id="ano" value="#{selectOneMenuView.console}"
+						style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="2014" itemValue="ceara" />
+						<f:selectItem itemLabel="2015" itemValue="paraiba" />
+						<f:selectItem itemLabel="2016" itemValue="pernambuco" />
+					</p:selectOneMenu>
+
+				</h:panelGrid>
+
+				<br />
+
+				<h:panelGrid id="camposCadastro2" columns="4" style="width:80%">
+
+					<h:outputText value="Disciplina: *" />
+					<p:selectOneMenu id="disciplina"
+						value="#{selectOneMenuView.console}" style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="Algoritmo" itemValue="ceara" />
+						<f:selectItem itemLabel="Física" itemValue="paraiba" />
+						<f:selectItem itemLabel="Biologia" itemValue="pernambuco" />
+					</p:selectOneMenu>
+
+					<h:outputText value="Horário de Oferta: *" />
+					<p:inputText style="width:250px" />
+
+				</h:panelGrid>
+
+				<br />
+
+				<p:separator />
+
+				<br />
+
+				<h:panelGrid id="dataTable" columns="1" style="width:100%">
+
+					<p:dataTable var="turma" emptyMessage="Nenhum registro encontrado.">
+						<p:column headerText="Matrícula">
+							<h:outputText value="Matrícula do Aluno" />
+						</p:column>
+
+						<p:column headerText="Aluno">
+							<h:outputText value="Nome Completo do Aluno" />
+						</p:column>
+
+						<p:column headerText="Adicionar ao Núcleo">
+							<p:selectBooleanCheckbox value="#{selectBooleanView.value1}" />
+						</p:column>
+					</p:dataTable>
+
+					<br />
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Salvar" icon="ui-icon-search" />
+
+						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+							icon="ui-icon-cancel" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

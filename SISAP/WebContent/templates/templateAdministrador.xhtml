@@ -46,38 +46,10 @@
 					<p:layoutUnit id="centerr" position="center">
 						<h:form>
 							<p:panelMenu style="width: 225px">
-								<p:submenu label="Atividade">
-									<p:menuitem value="Atendimento"
-										outcome="/paginas/atendimento.xhtml" />
-									<p:menuitem value="Encaminhamento" />
-									<p:menuitem value="Notificação" />
-									<p:menuitem value="Reunião" />
-									<p:menuitem value="Visita Domiciliar" />
-								</p:submenu>
-								<p:submenu label="Diário Pessoal">
-									<p:menuitem value="Registrar" />
-									<p:menuitem value="Visualizar Diário" />
-									<p:menuitem value="Relatório Pessoal" />
-								</p:submenu>
-								<p:submenu label="Conselho de Classe">
-									<p:menuitem value="Bimestral" />
-									<p:menuitem value="Anual" />
-								</p:submenu>
-								<p:submenu label="Núcleo de Aprendizagem">
-									<p:menuitem value="Visualizar Núcleos" />
-									<p:menuitem value="Relatório de Núcleo" />
-								</p:submenu>
-								<p:submenu label="Setor Institucional">
-									<p:menuitem value="Cadastrar" />
-									<p:menuitem value="Visualizar Setores" />
-								</p:submenu>
-								<p:submenu label="Boletim do Aluno">
-									<p:menuitem value="Visualizar Boletim" />
-									<p:menuitem value="Relatório de Boletim" />
-								</p:submenu>
-								<p:submenu label="Sincronização">
-									<p:menuitem value="Realizar Sincronização" />
-									<p:menuitem value="Verificar Estado" />
+								<p:submenu label="Usuários do Sistema">
+									<p:menuitem value="Novo"
+										outcome="/paginas/administrador/cadastroUsuario.xhtml" />
+									<p:menuitem value="Ver Usuários" />
 								</p:submenu>
 							</p:panelMenu>
 						</h:form>
@@ -86,12 +58,8 @@
 					<p:layoutUnit id="bottomm" position="south">
 						<center>
 							<h:form>
-								<p:button icon="ui-icon-comment" title="Notificações">
-									<f:param name="productId" value="30" />
-								</p:button>
-								<p:button icon="ui-icon-wrench" title="Ferramentas">
-									<f:param name="productId" value="30" />
-								</p:button>
+								<p:button icon="ui-icon-comment" title="Notificações" />
+								<p:button icon="ui-icon-wrench" title="Ferramentas" />
 								<p:button icon="ui-icon-extlink" title="Sair"
 									outcome="/paginas/login.xhtml" />
 							</h:form>

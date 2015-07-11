@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+
+	<h:head>
+		<link rel="stylesheet" href="../../resources/theme.css"
+			type="text/css" />
+		<link rel="shortcut icon" href="../resources/favicon.ico"
+			type="image/x-icon" />
+		<style type="text/css">
+.ui-layout-north {
+	z-index: 20 !important;
+	overflow: visible !important;;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+}
+</style>
+		<title><ui:insert name="title">SISAP</ui:insert></title>
+	</h:head>
+
+	<h:body>
+
+		<p:layout fullPage="true">
+
+			<p:layoutUnit id="top" position="north">
+				<h:form></h:form>
+			</p:layoutUnit>
+
+			<p:layoutUnit id="left" position="west" size="260" resizable="false"
+				closable="false" collapsible="true" minSize="200">
+				<p:layout>
+					<p:layoutUnit id="topp" position="north">
+						<center>
+							<img src="../resources/logo_sisap.png" height="161px"
+								width="175px" />
+						</center>
+					</p:layoutUnit>
+					<p:layoutUnit id="centerr" position="center">
+						<h:form>
+							<p:panelMenu style="width: 225px">
+								<p:submenu label="Atividade">
+									<p:menuitem value="Atendimento"
+										outcome="/paginas/pedagogo/atendimento.xhtml" />
+									<p:menuitem value="Encaminhamento" />
+									<p:menuitem value="Notificação" />
+									<p:menuitem value="Reunião" />
+									<p:menuitem value="Visita Domiciliar" />
+								</p:submenu>
+								<p:submenu label="Diário Pessoal">
+									<p:menuitem value="Registrar" />
+									<p:menuitem value="Visualizar Diário" />
+									<p:menuitem value="Relatório Pessoal" />
+								</p:submenu>
+								<p:submenu label="Conselho de Classe">
+									<p:menuitem value="Bimestral" />
+									<p:menuitem value="Anual" />
+								</p:submenu>
+								<p:submenu label="Núcleo de Aprendizagem">
+									<p:menuitem value="Visualizar Núcleos" />
+									<p:menuitem value="Relatório de Núcleo" />
+								</p:submenu>
+								<p:submenu label="Setor Institucional">
+									<p:menuitem value="Cadastrar" />
+									<p:menuitem value="Visualizar Setores" />
+								</p:submenu>
+								<p:submenu label="Boletim do Aluno">
+									<p:menuitem value="Visualizar Boletim" />
+									<p:menuitem value="Relatório de Boletim" />
+								</p:submenu>
+								<p:submenu label="Sincronização">
+									<p:menuitem value="Realizar Sincronização" />
+									<p:menuitem value="Verificar Estado" />
+								</p:submenu>
+							</p:panelMenu>
+						</h:form>
+					</p:layoutUnit>
+
+					<p:layoutUnit id="bottomm" position="south">
+						<center>
+							<h:form>
+								<p:button icon="ui-icon-comment" title="Notificações" />
+								<p:button icon="ui-icon-wrench" title="Ferramentas" />
+								<p:button icon="ui-icon-extlink" title="Sair"
+									outcome="/paginas/login.xhtml" />
+							</h:form>
+						</center>
+					</p:layoutUnit>
+				</p:layout>
+			</p:layoutUnit>
+
+			<p:layoutUnit id="center" position="center">
+				<p:layout>
+					<p:layoutUnit id="cima" position="north">
+						<h:form>
+							<p:link value="Home" />
+						</h:form>
+					</p:layoutUnit>
+					<p:layoutUnit id="centro" position="center">
+						<ui:insert name="center" />
+					</p:layoutUnit>
+				</p:layout>
+			</p:layoutUnit>
+
+			<p:layoutUnit id="bottom" position="south" size="60">
+				<center>
+					Instituto Federal de Educação Ciência e Tecnologia da Paraíba -
+					Campus Monteiro<br />Análise e Desenvolvimento de Sistemas -
+					2012.2
+				</center>
+			</p:layoutUnit>
+		</p:layout>
+
+	</h:body>
+</f:view>
+</html>

@@ -7,7 +7,7 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-<ui:composition template="/templates/template.xhtml">
+<ui:composition template="/templates/templatePedagogo.xhtml">
 
 	<ui:define name="title">
 	SISAP - Atendimento Passo 1/2
@@ -20,8 +20,7 @@
 
 		<h:form>
 			<p:fieldset legend="Atendimento Passo 1/2">
-				<h:panelGrid id="resultadoBusca" columns="2"
-					emptyMessage="Nenhum registro encontrado.">
+				<h:panelGrid id="resultadoBusca" columns="2">
 
 					<div>
 						<h:outputText value="Resultado da Busca" />
@@ -69,11 +68,12 @@
 				<br />
 
 				<f:facet name="footer">
-					<p:button value="Continuar" icon="ui-icon-search" outcome="/paginas/atendimentoPasso2.xhtml" />
+					<p:button value="Continuar" icon="ui-icon-search"
+						outcome="/paginas/pedagogo/atendimentoPasso2.xhtml" />
 
 					<p:commandButton id="limparBotao" value="Limpar"
 						update="camposAtendimento2" process="@this" icon="ui-icon-close">
-						<p:resetInput target="camposAluno" />
+						<p:resetInput target="camposAtendimento2" />
 					</p:commandButton>
 					<p:button value="Cancelar" outcome="/paginas/index.xhtml"
 						icon="ui-icon-cancel" />
