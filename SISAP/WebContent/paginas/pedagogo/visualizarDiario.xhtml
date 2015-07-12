@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Visualizar Diário
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Diário Pessoal (Atividades Registradas)">
+				<p:dataTable var="diario" value="#{dtFilterView.cars}"
+					widgetVar="diario" emptyMessage="Nenhum registro encontrado"
+					filteredValue="#{dtFilterView.filteredCars}" rows="10"
+					paginator="true" rowsPerPageTemplate="5,10,15">>
+
+					<p:column filterBy="#{data.a}" headerText="Data de Agendamento"
+						filterMatchMode="contains">
+						<h:outputText value="agendamento" />
+					</p:column>
+
+					<p:column filterBy="#{data.a}" headerText="Data de Finalização"
+						filterMatchMode="contains">
+						<h:outputText value="finalizacao" />
+					</p:column>
+
+					<p:column filterBy="#{data.a}" headerText="Tipo de Atividade"
+						filterMatchMode="contains">
+						<h:outputText value="atividade" />
+					</p:column>
+
+					<p:column filterBy="#{data.a}" headerText="Estado"
+						filterMatchMode="contains">
+						<h:outputText value="estado" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Visualizar/Alterar">
+						<p:button title="Visualizar/Alterar" icon="ui-icon-pencil" />
+					</p:column>
+
+				</p:dataTable>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

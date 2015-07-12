@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templateList.xhtml">
+
+	<ui:define name="title">
+	SISAP - Registrar Frequência
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<h:panelGrid id="camposTurma" columns="3" style="width:40%">
+				<h:outputText value="Série: 2º ano" />
+				<h:outputText value="Ano letivo: 2015.1" />
+				<h:outputText value="Curso: Música" />
+			</h:panelGrid>
+
+			<h:panelGrid id="camposTurma2" columns="2">
+				<h:outputText value="Professor:" />
+				<h:outputText value="Bruno Luna" />
+			</h:panelGrid>
+
+			<br />
+
+			<h:panelGrid id="camposTurma3" columns="2">
+				<h:outputText value="Data:" />
+				<p:calendar id="button" value="#{calendarView.date3}"
+					showOn="button" />
+			</h:panelGrid>
+
+			<br />
+
+			<p:dataTable var="alunos" value="#{dtFilterView.cars}"
+				widgetVar="alunos" emptyMessage="Nenhum registro encontrado"
+				filteredValue="#{dtFilterView.filteredCars}">
+
+				<p:column headerText="Aluno" style="width:80%">
+					<h:outputText value="aluno" />
+				</p:column>
+
+				<p:column headerText="P" style="width:10%">
+					<p:selectBooleanCheckbox value="#{selectBooleanView.value1}" />
+				</p:column>
+
+				<p:column headerText="F" style="width:10%">
+					<p:selectBooleanCheckbox value="#{selectBooleanView.value1}" />
+				</p:column>
+
+			</p:dataTable>
+
+			<br />
+			<br />
+
+			<center>
+				<p:button value="Registrar Frequência" icon="ui-icon-search" />
+			</center>
+
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

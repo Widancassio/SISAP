@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Enviar Notificação
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Enviar Notificação">
+				<h:panelGrid id="alunoBuscado" columns="2">
+					<p:outputLabel value="Nome do aluno:" />
+					<p:outputLabel value="(aluno já buscado)" />
+				</h:panelGrid>
+
+				<br />
+
+				<h:panelGrid id="camposNotificacao" columns="2">
+
+					<h:outputText value="Responsável: *" />
+					<p:selectOneMenu id="responsavel"
+						value="#{selectOneMenuView.console}" style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="Pai" itemValue="setor1" />
+						<f:selectItem itemLabel="Mãe" itemValue="setor2" />
+						<f:selectItem itemLabel="Tio" itemValue="setor3" />
+					</p:selectOneMenu>
+
+					<h:outputText value="Descrição: *" />
+					<p:inputTextarea rows="3" cols="45" maxlength="10"
+						autoResize="true" />
+
+					<h:outputText value="Forma de Envio: *" />
+					<p:selectOneMenu id="envio" value="#{selectOneMenuView.console}"
+						style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="SMS" itemValue="setor1" />
+						<f:selectItem itemLabel="E-mail" itemValue="setor2" />
+						<f:selectItem itemLabel="Ligação" itemValue="setor3" />
+					</p:selectOneMenu>
+
+					<br />
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Enviar" />
+
+						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+							icon="ui-icon-cancel" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
