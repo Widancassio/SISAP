@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Cadastro de Setor Institucional
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Cadastro de Setor Institucional">
+				<h:panelGrid id="camposCadastro" columns="4" style="width:80%">
+
+					<h:outputText value="Nome do Setor: *" />
+					<p:inputText id="nome" style="width:250px" required="false" />
+
+					<h:outputText value="Responsável: *" />
+					<p:inputText id="responsavel" style="width:250px" required="false" />
+
+					<h:outputText value="Horário de Funcionamento: *" />
+					<p:inputText id="horario" style="width:250px" required="false" />
+
+					<h:outputText value="E-mail: *" />
+					<p:inputText id="email" style="width:250px" required="false" />
+				</h:panelGrid>
+
+				<h:panelGrid id="camposCadastro2" columns="2">
+					<h:outputText value="Estado/Situação: *" />
+					<p:selectOneRadio id="estado" value="#{radioView.console}">
+						<f:selectItem itemLabel="Ativo" itemValue="Sim" />
+						<f:selectItem itemLabel="Inativo" itemValue="Nao" />
+					</p:selectOneRadio>
+
+					<br />
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Salvar" icon="ui-icon-search" />
+
+						<p:commandButton id="limparBotao" value="Limpar"
+							update="camposCadastro" process="@this" icon="ui-icon-close">
+							<p:resetInput target="camposCadastro" />
+						</p:commandButton>
+						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+							icon="ui-icon-cancel" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

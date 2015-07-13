@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Conselho de Classe
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Conselho de Classe">
+				<h:panelGrid id="camposConselho" columns="3" style="width : 55%">
+
+					<h:outputText value="Turma: 1ª ano" />
+					<h:outputText value="Quantidade de alunos da turma: 48" />
+					<h:outputText value="Indicados para este conselho: 04" />
+
+				</h:panelGrid>
+
+				<br />
+
+				<h:panelGrid id="conselho" columns="1">
+
+					<p:dataTable var="conselho" value="#{dtFilterView.cars}"
+						widgetVar="conselho" emptyMessage="Nenhum registro encontrado"
+						filteredValue="#{dtFilterView.filteredCars}" rows="10"
+						paginator="true" rowsPerPageTemplate="5,10,15">>
+
+						<p:column headerText="Matrícula">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Nome do Aluno">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+
+						<p:column headerText="Média">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Artes">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Biologia I">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Quimica I">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Física I">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Geografia I">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Matématica">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="História">
+							<h:outputText value="agendamento" />
+						</p:column>
+
+						<p:column headerText="Visualizar">
+							<p:button title="Visualizar" icon="ui-icon-pencil" />
+						</p:column>
+
+					</p:dataTable>
+
+					<br />
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Relatório Geral" icon="ui-icon-search" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

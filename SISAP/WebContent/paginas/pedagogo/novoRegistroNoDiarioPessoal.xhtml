@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Novo Registro no Diário Pessoal
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Novo Registro no Diário Pessoal">
+				<h:panelGrid id="camposCadastro" columns="4" style="width:65%">
+
+					<h:outputText value="Data de Agendamento: *" />
+					<p:calendar id="agenda" />
+
+					<h:outputText value="Data de Finalização: *" />
+					<p:calendar id="final" />
+
+				</h:panelGrid>
+
+				<h:panelGrid id="camposCadastro2" columns="2">
+
+					<h:outputText value="Ação/Tipo de Atividade: *" />
+					<p:inputText id="acao" style="width:267px" />
+
+				</h:panelGrid>
+
+				<h:panelGrid id="camposCadastro3" columns="4" style="width:80%">
+
+					<h:outputText value="Identificação: *" />
+					<p:inputText id="identificacao" style="width:332px" />
+
+					<h:outputText value="Solicitante: *" />
+					<p:inputText id="solicitante" style="width:250px" />
+
+					<h:outputText value="Descrição: *" />
+					<p:inputTextarea rows="3" cols="45" maxlength="10"
+						autoResize="true" />
+
+					<h:outputText value="Estado: *" />
+					<p:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
+						style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="Agendada" itemValue="setor1" />
+						<f:selectItem itemLabel="Concluída" itemValue="setor2" />
+						<f:selectItem itemLabel="Cancelada" itemValue="setor3" />
+						<f:selectItem itemLabel="Encaminhada" itemValue="setor4" />
+						<f:selectItem itemLabel="Em andamento" itemValue="setor5" />
+					</p:selectOneMenu>
+
+
+
+					<br />
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Registrar" icon="ui-icon-search" />
+
+						<p:commandButton id="limparBotao" value="Limpar"
+							update="camposCadastro, camposCadastro2, camposCadastro3"
+							process="@this" icon="ui-icon-close">
+							<p:resetInput
+								target="camposCadastro, camposCadastro2, camposCadastro3" />
+						</p:commandButton>
+						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+							icon="ui-icon-cancel" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

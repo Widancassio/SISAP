@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Visita Domiciliar
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Visita Domiciliar">
+				<h:panelGrid id="campos" columns="2">
+
+					<h:outputText value="Nome do aluno:" />
+					<h:outputText value="(nome completo buscado anteriormente)" />
+
+				</h:panelGrid>
+
+				<br />
+
+				<h:panelGrid id="camposVisita" columns="4">
+
+					<h:outputText value="Data de Agendamento: *" />
+					<p:calendar id="agenda" />
+
+					<h:outputText value="Data de Finalização: *" />
+					<p:calendar id="final" />
+
+					<h:outputText value="Descrição: *" />
+					<p:inputTextarea rows="3" cols="45" maxlength="10"
+						autoResize="true" />
+
+					<h:outputText value="Motivo: *" />
+					<p:inputTextarea rows="3" cols="45" maxlength="10"
+						autoResize="true" />
+
+					<h:outputText value="Análise: *" />
+					<p:inputTextarea rows="3" cols="45" maxlength="10"
+						autoResize="true" />
+
+					<h:outputText value="Estado: *" />
+					<p:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
+						style="width:175px">
+						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+						<f:selectItem itemLabel="Agendada" itemValue="setor1" />
+						<f:selectItem itemLabel="Concluída" itemValue="setor2" />
+						<f:selectItem itemLabel="Cancelada" itemValue="setor3" />
+						<f:selectItem itemLabel="Encaminhada" itemValue="setor4" />
+						<f:selectItem itemLabel="Em andamento" itemValue="setor5" />
+					</p:selectOneMenu>
+
+					<br />
+					<br />
+
+					<f:facet name="footer">
+						<p:button value="Salvar" icon="ui-icon-search"
+							outcome="/paginas/pedagogo/atendimentoPasso1.xhtml" />
+
+						<p:commandButton id="limparBotao" value="Limpar"
+							update="camposVisita" process="@this" icon="ui-icon-close">
+							<p:resetInput target="camposVisita" />
+						</p:commandButton>
+						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+							icon="ui-icon-cancel" />
+					</f:facet>
+				</h:panelGrid>
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

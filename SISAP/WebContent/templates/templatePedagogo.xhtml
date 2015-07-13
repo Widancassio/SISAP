@@ -50,32 +50,43 @@
 									<p:menuitem value="Atendimento"
 										outcome="/paginas/pedagogo/atendimento.xhtml" />
 									<p:menuitem value="Notificação"
-										outcome="/paginas/pedagogo/enviarNotificacao.xhtml" />
-									<p:menuitem value="Reunião" />
-									<p:menuitem value="Visita Domiciliar" />
+										outcome="/paginas/pedagogo/buscarAlunoParaEnviarNotificacao.xhtml" />
+									<p:menuitem value="Reunião"
+										outcome="/paginas/pedagogo/reuniao.xhtml" />
+									<p:menuitem value="Visita Domiciliar"
+										outcome="/paginas/pedagogo/buscarAlunoParaAgendarVisita.xhtml" />
 								</p:submenu>
+
 								<p:submenu label="Diário Pessoal">
-									<p:menuitem value="Registrar" />
+									<p:menuitem value="Registrar"
+										outcome="/paginas/pedagogo/novoRegistroNoDiarioPessoal.xhtml" />
 									<p:menuitem value="Visualizar Diário"
 										outcome="/paginas/pedagogo/visualizarDiario.xhtml" />
-									<p:menuitem value="Relatório Pessoal" />
+									<p:menuitem value="Relatório Pessoal"
+										outcome="/paginas/pedagogo/gerarRelatorioDeDiarioPessoal.xhtml" />
 								</p:submenu>
+
 								<p:submenu label="Conselho de Classe">
-									<p:menuitem value="Bimestral" />
-									<p:menuitem value="Anual" />
+									<p:menuitem value="Participar"
+										outcome="/paginas/pedagogo/participarDoConselho.xhtml" />
 								</p:submenu>
+
 								<p:submenu label="Núcleo de Aprendizagem">
 									<p:menuitem value="Visualizar Núcleos" />
 									<p:menuitem value="Relatório de Núcleo" />
 								</p:submenu>
+
 								<p:submenu label="Setor Institucional">
-									<p:menuitem value="Cadastrar" />
+									<p:menuitem value="Cadastrar"
+										outcome="/paginas/pedagogo/cadastroDeSetor.xhtml" />
 									<p:menuitem value="Visualizar Setores" />
 								</p:submenu>
+
 								<p:submenu label="Boletim do Aluno">
 									<p:menuitem value="Visualizar Boletim" />
 									<p:menuitem value="Relatório de Boletim" />
 								</p:submenu>
+
 								<p:submenu label="Sincronização">
 									<p:menuitem value="Realizar Sincronização" />
 									<p:menuitem value="Verificar Estado" />

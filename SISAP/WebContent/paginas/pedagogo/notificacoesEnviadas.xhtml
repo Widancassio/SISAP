@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Notificações Enviadas
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Notificações Enviadas">
+				<p:dataTable var="notificacoes" value="#{dtFilterView.cars}"
+					widgetVar="notificacoes" emptyMessage="Nenhum registro encontrado"
+					filteredValue="#{dtFilterView.filteredCars}" rows="10"
+					paginator="true" rowsPerPageTemplate="5,10,15">>
+
+					<p:column filterBy="#{ano.a}" headerText="Data">
+						<h:outputText value="data" />
+					</p:column>
+
+					<p:column filterBy="#{ano.a}" headerText="Nome/Setor">
+						<h:outputText value="nome" />
+					</p:column>
+
+					<p:column filterBy="#{ano.a}" headerText="Forma de Envio">
+						<f:facet name="filter">
+							<p:selectOneMenu id="itens">
+								<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+								<f:selectItem itemLabel="Setor 1" itemValue="setor1" />
+								<f:selectItem itemLabel="Setor 2" itemValue="setor2" />
+								<f:selectItem itemLabel="Setor 3" itemValue="setor3" />
+							</p:selectOneMenu>
+						</f:facet>
+						<h:outputText value="ano" />
+					</p:column>
+
+					<p:column filterBy="#{ano.a}" headerText="Situação Final">
+						<f:facet name="filter">
+							<p:selectOneMenu id="itens2">
+								<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+								<f:selectItem itemLabel="Setor 1" itemValue="setor1" />
+								<f:selectItem itemLabel="Setor 2" itemValue="setor2" />
+								<f:selectItem itemLabel="Setor 3" itemValue="setor3" />
+							</p:selectOneMenu>
+						</f:facet>
+						<h:outputText value="curso" />
+					</p:column>
+
+					<p:column headerText="Alterar Situação">
+						<p:button title="Alterar Situação" icon="ui-icon-clipboard" />
+					</p:column>
+
+				</p:dataTable>
+
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

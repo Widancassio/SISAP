@@ -10,7 +10,7 @@
 <ui:composition template="/templates/templatePedagogo.xhtml">
 
 	<ui:define name="title">
-	SISAP - Atendimento
+	SISAP - Relatório de Diário Pessoal
 	</ui:define>
 
 	<ui:define name="center">
@@ -19,26 +19,29 @@
 			showSummary="true" />
 
 		<h:form>
-			<p:fieldset legend="Atendimento">
-				<h:panelGrid id="camposAtendimento" columns="2">
+			<p:fieldset legend="Gerar Relatório de Diário Pessoal">
+				<h:panelGrid id="camposRelatorio" columns="1">
 
-					<p:outputLabel for="button" value="Data: *" />
+					<p:outputLabel value="Informe um período de datas:" />
+
+				</h:panelGrid>
+
+				<br />
+
+				<h:panelGrid id="camposRelatorio2" columns="4">
+					<h:outputText value="De: *" />
 					<p:calendar id="button" />
 
-					<h:outputText value="Nome/Matrícula: *" />
-					<p:inputText id="matricula" style="width:250px" required="false" />
+					<h:outputText value="De: *" />
+					<p:calendar id="button1" />
 
 					<br />
 					<br />
 
 					<f:facet name="footer">
-						<p:button value="Continuar" icon="ui-icon-search"
-							outcome="/paginas/pedagogo/atendimentoPasso1.xhtml" />
+						<p:button value="Gerar Relatorio" icon="ui-icon-search"
+							outcome="/paginas/pedagogo/relatorioDeDiarioPessoal.xhtml" />
 
-						<p:commandButton id="limparBotao" value="Limpar"
-							update="camposAtendimento" process="@this" icon="ui-icon-close">
-							<p:resetInput target="camposAtendimento" />
-						</p:commandButton>
 						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
 							icon="ui-icon-cancel" />
 					</f:facet>

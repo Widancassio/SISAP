@@ -25,27 +25,23 @@
 					filteredValue="#{dtFilterView.filteredCars}" rows="10"
 					paginator="true" rowsPerPageTemplate="5,10,15">>
 
-					<p:column filterBy="#{data.a}" headerText="Data de Agendamento"
-						filterMatchMode="contains">
+					<p:column filterBy="#{data.a}" headerText="Data de Agendamento">
 						<h:outputText value="agendamento" />
 					</p:column>
 
-					<p:column filterBy="#{data.a}" headerText="Data de Finalização"
-						filterMatchMode="contains">
+					<p:column filterBy="#{data.a}" headerText="Data de Finalização">
 						<h:outputText value="finalizacao" />
 					</p:column>
 
-					<p:column filterBy="#{data.a}" headerText="Tipo de Atividade"
-						filterMatchMode="contains">
+					<p:column filterBy="#{data.a}" headerText="Tipo de Atividade">
 						<h:outputText value="atividade" />
 					</p:column>
 
-					<p:column filterBy="#{data.a}" headerText="Estado"
-						filterMatchMode="contains">
+					<p:column filterBy="#{data.a}" headerText="Estado">
 						<h:outputText value="estado" />
 					</p:column>
 
-					<p:column filterBy="#" headerText="Visualizar/Alterar">
+					<p:column headerText="Visualizar/Alterar">
 						<p:button title="Visualizar/Alterar" icon="ui-icon-pencil" />
 					</p:column>
 

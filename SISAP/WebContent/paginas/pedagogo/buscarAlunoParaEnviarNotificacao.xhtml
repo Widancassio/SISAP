@@ -10,7 +10,7 @@
 <ui:composition template="/templates/templatePedagogo.xhtml">
 
 	<ui:define name="title">
-	SISAP - Atendimento
+	SISAP - Buscar Aluno Para Enviar Notificação
 	</ui:define>
 
 	<ui:define name="center">
@@ -19,29 +19,22 @@
 			showSummary="true" />
 
 		<h:form>
-			<p:fieldset legend="Atendimento">
-				<h:panelGrid id="camposAtendimento" columns="2">
+			<p:fieldset legend="Buscar Aluno Para Enviar Notificação">
+				<h:panelGrid id="camposBusca" columns="3">
 
-					<p:outputLabel for="button" value="Data: *" />
-					<p:calendar id="button" />
-
-					<h:outputText value="Nome/Matrícula: *" />
+					<h:outputText value="Nome/Matrícula do Aluno: *" />
 					<p:inputText id="matricula" style="width:250px" required="false" />
+					<p:button value="Buscar"
+						outcome="/paginas/pedagogo/enviarNotificacao.xhtml" />
 
 					<br />
 					<br />
 
 					<f:facet name="footer">
-						<p:button value="Continuar" icon="ui-icon-search"
-							outcome="/paginas/pedagogo/atendimentoPasso1.xhtml" />
-
-						<p:commandButton id="limparBotao" value="Limpar"
-							update="camposAtendimento" process="@this" icon="ui-icon-close">
-							<p:resetInput target="camposAtendimento" />
-						</p:commandButton>
-						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
-							icon="ui-icon-cancel" />
+						<p:button value="Notificações Enviadas" icon="ui-icon-search"
+							outcome="/paginas/pedagogo/notificacoesEnviadas.xhtml" />
 					</f:facet>
+
 				</h:panelGrid>
 			</p:fieldset>
 		</h:form>
