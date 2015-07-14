@@ -22,33 +22,33 @@
 			<p:fieldset legend="Participar do Conselho de Classe">
 				<h:panelGrid id="camposConselho" columns="2">
 
-					<p:outputLabel value="Opção de Conselho: *" />
-					<p:selectOneRadio id="encaminhamento" value="#{radioView.console}">
+					<h:outputLabel value="Opção de Conselho: *" />
+					<h:selectOneRadio id="encaminhamento" value="#{radioView.console}">
 						<f:selectItem itemLabel="Bimestral" itemValue="Bimestral" />
 						<f:selectItem itemLabel="Anual" itemValue="Anual" />
-					</p:selectOneRadio>
+					</h:selectOneRadio>
 
 				</h:panelGrid>
 
 				<h:panelGrid id="selecionar" columns="4" style="width:60%">
 
 					<h:outputText value="Curso: *" />
-					<p:selectOneMenu id="curso" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="curso" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="Curso 1" itemValue="setor1" />
 						<f:selectItem itemLabel="Curso 2" itemValue="setor2" />
 						<f:selectItem itemLabel="Curso 3" itemValue="setor3" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<h:outputText value="Turma: *" />
-					<p:selectOneMenu id="turma" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="turma" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="Turma 1" itemValue="setor1" />
 						<f:selectItem itemLabel="Turma 2" itemValue="setor2" />
 						<f:selectItem itemLabel="TUrma 3" itemValue="setor3" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<br />
 					<br />

@@ -23,24 +23,24 @@
 				<h:panelGrid id="camposCadastro" columns="4" style="width:80%">
 
 					<h:outputText value="Nome do Setor: *" />
-					<p:inputText id="nome" style="width:250px" required="false" />
+					<h:inputText id="nome" style="width:250px" required="false" />
 
 					<h:outputText value="Responsável: *" />
-					<p:inputText id="responsavel" style="width:250px" required="false" />
+					<h:inputText id="responsavel" style="width:250px" required="false" />
 
 					<h:outputText value="Horário de Funcionamento: *" />
-					<p:inputText id="horario" style="width:250px" required="false" />
+					<h:inputText id="horario" style="width:250px" required="false" />
 
 					<h:outputText value="E-mail: *" />
-					<p:inputText id="email" style="width:250px" required="false" />
+					<h:inputText id="email" style="width:250px" required="false" />
 				</h:panelGrid>
 
 				<h:panelGrid id="camposCadastro2" columns="2">
 					<h:outputText value="Estado/Situação: *" />
-					<p:selectOneRadio id="estado" value="#{radioView.console}">
+					<h:selectOneRadio id="estado" value="#{radioView.console}">
 						<f:selectItem itemLabel="Ativo" itemValue="Sim" />
 						<f:selectItem itemLabel="Inativo" itemValue="Nao" />
-					</p:selectOneRadio>
+					</h:selectOneRadio>
 
 					<br />
 					<br />

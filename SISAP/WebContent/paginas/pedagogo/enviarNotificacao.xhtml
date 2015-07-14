@@ -30,26 +30,26 @@
 				<h:panelGrid id="camposNotificacao" columns="2">
 
 					<h:outputText value="Responsável: *" />
-					<p:selectOneMenu id="responsavel"
+					<h:selectOneMenu id="responsavel"
 						value="#{selectOneMenuView.console}" style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="Pai" itemValue="setor1" />
 						<f:selectItem itemLabel="Mãe" itemValue="setor2" />
 						<f:selectItem itemLabel="Tio" itemValue="setor3" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<h:outputText value="Descrição: *" />
-					<p:inputTextarea rows="3" cols="45" maxlength="10"
+					<h:inputTextarea rows="3" cols="45" maxlength="10"
 						autoResize="true" />
 
 					<h:outputText value="Forma de Envio: *" />
-					<p:selectOneMenu id="envio" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="envio" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="SMS" itemValue="setor1" />
 						<f:selectItem itemLabel="E-mail" itemValue="setor2" />
 						<f:selectItem itemLabel="Ligação" itemValue="setor3" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<br />
 					<br />

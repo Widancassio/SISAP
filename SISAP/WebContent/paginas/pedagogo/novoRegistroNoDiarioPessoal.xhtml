@@ -33,24 +33,24 @@
 				<h:panelGrid id="camposCadastro2" columns="2">
 
 					<h:outputText value="Ação/Tipo de Atividade: *" />
-					<p:inputText id="acao" style="width:267px" />
+					<h:inputText id="acao" style="width:267px" />
 
 				</h:panelGrid>
 
 				<h:panelGrid id="camposCadastro3" columns="4" style="width:80%">
 
 					<h:outputText value="Identificação: *" />
-					<p:inputText id="identificacao" style="width:332px" />
+					<h:inputText id="identificacao" style="width:332px" />
 
 					<h:outputText value="Solicitante: *" />
-					<p:inputText id="solicitante" style="width:250px" />
+					<h:inputText id="solicitante" style="width:250px" />
 
 					<h:outputText value="Descrição: *" />
-					<p:inputTextarea rows="3" cols="45" maxlength="10"
+					<h:inputTextarea rows="3" cols="45" maxlength="10"
 						autoResize="true" />
 
 					<h:outputText value="Estado: *" />
-					<p:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="Agendada" itemValue="setor1" />
@@ -58,7 +58,7 @@
 						<f:selectItem itemLabel="Cancelada" itemValue="setor3" />
 						<f:selectItem itemLabel="Encaminhada" itemValue="setor4" />
 						<f:selectItem itemLabel="Em andamento" itemValue="setor5" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 
 

@@ -25,21 +25,21 @@
 					<h:outputText style="font-size:16px"
 						value="Deseja realizar encaminhamento deste atendimento?" />
 
-					<p:selectOneRadio id="encaminhamento" value="#{radioView.console}">
+					<h:selectOneRadio id="encaminhamento" value="#{radioView.console}">
 						<f:selectItem itemLabel="Sim" itemValue="Sim" />
 						<f:selectItem itemLabel="Não" itemValue="Nao" />
-					</p:selectOneRadio>
+					</h:selectOneRadio>
 
 					<h:panelGrid id="selecionarSetor" columns="2">
 						<h:outputText value="Setor: *" />
 
-						<p:selectOneMenu id="setor" value="#{selectOneMenuView.console}"
+						<h:selectOneMenu id="setor" value="#{selectOneMenuView.console}"
 							style="width:175px">
 							<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 							<f:selectItem itemLabel="Setor 1" itemValue="setor1" />
 							<f:selectItem itemLabel="Setor 2" itemValue="setor2" />
 							<f:selectItem itemLabel="Setor 3" itemValue="setor3" />
-						</p:selectOneMenu>
+						</h:selectOneMenu>
 					</h:panelGrid>
 
 					<p:button value="Encaminhar e notificar setor" />
@@ -49,31 +49,31 @@
 					<h:outputText style="font-size:16px"
 						value="Deseja notificar responsável do aluno?" />
 
-					<p:selectOneRadio id="notificacao" value="#{radioView.console}">
+					<h:selectOneRadio id="notificacao" value="#{radioView.console}">
 						<f:selectItem itemLabel="Sim" itemValue="Sim" />
 						<f:selectItem itemLabel="Não" itemValue="Nao" />
-					</p:selectOneRadio>
+					</h:selectOneRadio>
 
 					<h:panelGrid id="notificarResponsavel" columns="2">
 						<h:outputText value="Responsável: *" />
 
-						<p:selectOneMenu id="responsavel"
+						<h:selectOneMenu id="responsavel"
 							value="#{selectOneMenuView.console}" style="width:175px">
 							<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 							<f:selectItem itemLabel="Pai" itemValue="setor1" />
 							<f:selectItem itemLabel="Mãe" itemValue="setor2" />
 							<f:selectItem itemLabel="Tio" itemValue="setor3" />
-						</p:selectOneMenu>
+						</h:selectOneMenu>
 
 						<h:outputText value="Forma de envio: *" />
 
-						<p:selectOneMenu id="envio" value="#{selectOneMenuView.console}"
+						<h:selectOneMenu id="envio" value="#{selectOneMenuView.console}"
 							style="width:175px">
 							<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 							<f:selectItem itemLabel="Email" itemValue="email" />
 							<f:selectItem itemLabel="SMS" itemValue="sms" />
 							<f:selectItem itemLabel="Ligação" itemValue="ligacao" />
-						</p:selectOneMenu>
+						</h:selectOneMenu>
 					</h:panelGrid>
 
 					<p:button value="Enviar notificação" icon="ui-icon-search" />

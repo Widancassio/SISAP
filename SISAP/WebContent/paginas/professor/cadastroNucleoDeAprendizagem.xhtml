@@ -34,30 +34,30 @@
 				<h:panelGrid id="camposCadastro" columns="6" style="width:100%">
 
 					<h:outputText value="Série: *" />
-					<p:selectOneMenu id="serie" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="serie" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="1º ano" itemValue="ceara" />
 						<f:selectItem itemLabel="2º ano" itemValue="paraiba" />
 						<f:selectItem itemLabel="3º ano" itemValue="pernambuco" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<h:outputText value="Curso: *" />
-					<p:selectOneMenu id="curso" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="curso" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="IM" itemValue="ceara" />
 						<f:selectItem itemLabel="MSI" itemValue="paraiba" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<h:outputText value="Ano letivo: *" />
-					<p:selectOneMenu id="ano" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="ano" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="2014" itemValue="ceara" />
 						<f:selectItem itemLabel="2015" itemValue="paraiba" />
 						<f:selectItem itemLabel="2016" itemValue="pernambuco" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 				</h:panelGrid>
 
@@ -66,16 +66,16 @@
 				<h:panelGrid id="camposCadastro2" columns="4" style="width:80%">
 
 					<h:outputText value="Disciplina: *" />
-					<p:selectOneMenu id="disciplina"
+					<h:selectOneMenu id="disciplina"
 						value="#{selectOneMenuView.console}" style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="Algoritmo" itemValue="ceara" />
 						<f:selectItem itemLabel="Física" itemValue="paraiba" />
 						<f:selectItem itemLabel="Biologia" itemValue="pernambuco" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<h:outputText value="Horário de Oferta: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 				</h:panelGrid>
 

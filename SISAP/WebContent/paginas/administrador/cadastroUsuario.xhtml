@@ -23,38 +23,38 @@
 				<h:panelGrid id="camposCadastro" columns="4" style="width:100%">
 
 					<h:outputText value="Nome completo: *" />
-					<p:inputText id="matricula" style="width:250px" required="false" />
+					<h:inputText id="matricula" style="width:250px" required="false" />
 
 					<h:outputText value="Sexo: *" />
-					<p:selectOneRadio id="sexo" value="#{radioView.console}">
+					<h:selectOneRadio id="sexo" value="#{radioView.console}">
 						<f:selectItem itemLabel="Masculino" itemValue="m" />
 						<f:selectItem itemLabel="Feminino" itemValue="f" />
-					</p:selectOneRadio>
+					</h:selectOneRadio>
 
 					<h:outputText value="Endereço: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="Bairro: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="Estado: *" />
-					<p:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="CE" itemValue="ceara" />
 						<f:selectItem itemLabel="PB" itemValue="paraiba" />
 						<f:selectItem itemLabel="PE" itemValue="pernambuco" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 					<h:outputText value="Cidade: *" />
-					<p:selectOneMenu id="setor" value="#{selectOneMenuView.console}"
+					<h:selectOneMenu id="setor" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
 						<f:selectItem itemLabel="Monteiro" itemValue="setor1" />
 						<f:selectItem itemLabel="Pesqueira" itemValue="setor2" />
 						<f:selectItem itemLabel="Sertânia" itemValue="setor3" />
 						<f:selectItem itemLabel="Tabira" itemValue="setor3" />
-					</p:selectOneMenu>
+					</h:selectOneMenu>
 
 				</h:panelGrid>
 
@@ -67,22 +67,22 @@
 				<h:panelGrid id="camposCadastro2" columns="4" style="width:100%">
 
 					<h:outputText value="Telefone 1: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="Telefone 2: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="E-mail: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="Repita o e-mail: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="Nome de usuário (login): *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 					<h:outputText value="Senha: *" />
-					<p:inputText style="width:250px" />
+					<h:inputText style="width:250px" />
 
 				</h:panelGrid>
 
