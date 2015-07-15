@@ -52,7 +52,7 @@
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid none;
-	background: #0073ea url("images/ui-bg_diagonals-small_15_0073ea_40x40.png") 50% 50% repeat;
+	background: #3A97B5 url("images/ui-bg_diagonals-small_15_0073ea_40x40.png") 50% 50% repeat;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -69,7 +69,7 @@
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	border: 1px solid #ffffff;
-	background: #81bcfa url("images/ui-bg_diagonals-small_25_81bcfa_40x40.png") 50% 50% repeat;
+	background: #3A97B5 url("images/ui-bg_diagonals-small_25_81bcfa_40x40.png") 50% 50% repeat;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -87,8 +87,8 @@
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-	border: 1px solid #5da7f6;
-	background: #5da7f6 url("images/ui-bg_diagonals-small_100_5da7f6_40x40.png") 50% 50% repeat;
+	border: 1px solid #3A97B5;
+	background: #3A97B5 url("images/ui-bg_diagonals-small_100_5da7f6_40x40.png") 50% 50% repeat;
 	font-weight: normal;
 	color: #ffffff;
 }
