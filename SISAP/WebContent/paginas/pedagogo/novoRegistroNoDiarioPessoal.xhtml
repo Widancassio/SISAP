@@ -66,15 +66,15 @@
 					<br />
 
 					<f:facet name="footer">
-						<p:button value="Registrar" icon="ui-icon-search" />
+						<h:button value="Registrar" icon="ui-icon-search" />
 
-						<p:commandButton id="limparBotao" value="Limpar"
+						<h:commandButton id="limparBotao" value="Limpar"
 							update="camposCadastro, camposCadastro2, camposCadastro3"
 							process="@this" icon="ui-icon-close">
 							<p:resetInput
 								target="camposCadastro, camposCadastro2, camposCadastro3" />
-						</p:commandButton>
-						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+						</h:commandButton>
+						<h:button value="Cancelar" outcome="/paginas/index.xhtml"
 							icon="ui-icon-cancel" />
 					</f:facet>
 				</h:panelGrid>

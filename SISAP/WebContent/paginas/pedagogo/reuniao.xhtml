@@ -55,14 +55,14 @@
 					<br />
 
 					<f:facet name="footer">
-						<p:button value="Salvar" icon="ui-icon-search"
+						<h:button value="Salvar" icon="ui-icon-search"
 							outcome="/paginas/pedagogo/atendimentoPasso1.xhtml" />
 
-						<p:commandButton id="limparBotao" value="Limpar"
+						<h:commandButton id="limparBotao" value="Limpar"
 							update="camposReuniao" process="@this" icon="ui-icon-close">
 							<p:resetInput target="camposReuniao" />
-						</p:commandButton>
-						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+						</h:commandButton>
+						<h:button value="Cancelar" outcome="/paginas/index.xhtml"
 							icon="ui-icon-cancel" />
 					</f:facet>
 				</h:panelGrid>

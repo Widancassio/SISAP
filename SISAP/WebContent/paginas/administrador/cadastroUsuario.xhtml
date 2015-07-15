@@ -96,15 +96,15 @@
 				<h:panelGrid id="botoes" columns="4" style="width:100%">
 
 					<f:facet name="footer">
-						<p:button value="Salvar" icon="ui-icon-search" />
+						<h:button value="Salvar" icon="ui-icon-search" />
 
-						<p:commandButton id="limparBotao" value="Limpar"
+						<h:commandButton id="limparBotao" value="Limpar"
 							update="camposCadastro, camposCadastro2" process="@this"
 							icon="ui-icon-close">
 							<p:resetInput target="camposCadastro" />
 							<p:resetInput target="camposCadastro2" />
-						</p:commandButton>
-						<p:button value="Cancelar" outcome="/paginas/index.xhtml"
+						</h:commandButton>
+						<h:button value="Cancelar" outcome="/paginas/index.xhtml"
 							icon="ui-icon-cancel" />
 					</f:facet>
 				</h:panelGrid>
