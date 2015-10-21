@@ -72,8 +72,8 @@
 						outcome="/paginas/pedagogo/atendimentoPasso2.xhtml" />
 
 					<h:commandButton id="limparBotao" value="Limpar"
-						update="camposAtendimento2" process="@this" icon="ui-icon-close">
-						<p:resetInput target="camposAtendimento2" />
+						update="camposAtendimento2, camposAtendimento2" process="@this" icon="ui-icon-close">
+						<p:resetInput target="camposAtendimento2, camposAtendimento2" />
 					</h:commandButton>
 
 					<h:button value="Cancelar" outcome="/paginas/index.xhtml"

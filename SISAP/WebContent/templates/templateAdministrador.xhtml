@@ -30,17 +30,13 @@
 
 		<p:layout fullPage="true">
 
-			<p:layoutUnit id="top" position="north">
-				<h:form></h:form>
-			</p:layoutUnit>
-
 			<p:layoutUnit id="left" position="west" size="260" resizable="false"
 				closable="false" collapsible="true" minSize="200">
 				<p:layout>
-					<p:layoutUnit id="topp" position="north">
+					<p:layoutUnit id="topp" position="south">
 						<center>
-							<img src="../../resources/logo_sisap.png" height="161px"
-								width="175px" />
+							<img src="../../resources/logo_sisap.png" height="80px"
+								width="87px" />
 						</center>
 					</p:layoutUnit>
 					<p:layoutUnit id="centerr" position="center">
@@ -55,7 +51,7 @@
 						</h:form>
 					</p:layoutUnit>
 
-					<p:layoutUnit id="bottomm" position="south">
+					<p:layoutUnit id="bottomm" position="north">
 						<center>
 							<h:form>
 								<p:button icon="ui-icon-comment" title="Notificações" />
@@ -70,11 +66,6 @@
 
 			<p:layoutUnit id="center" position="center">
 				<p:layout>
-					<p:layoutUnit id="cima" position="north">
-						<h:form>
-							<p:link value="Home" />
-						</h:form>
-					</p:layoutUnit>
 					<p:layoutUnit id="centro" position="center">
 						<ui:insert name="center" />
 					</p:layoutUnit>

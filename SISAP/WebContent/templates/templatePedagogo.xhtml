@@ -30,31 +30,26 @@
 
 		<p:layout fullPage="true">
 
-			<p:layoutUnit id="top" position="north">
-				<h:form></h:form>
-			</p:layoutUnit>
-
 			<p:layoutUnit id="left" position="west" size="260" resizable="false"
 				closable="false" collapsible="true" minSize="200">
 				<p:layout>
-					<p:layoutUnit id="topp" position="north">
+					<p:layoutUnit id="topp" position="south">
 						<center>
 							<a href="http://localhost:8080/SISAP/faces/paginas/index.xhtml"><img
-								src="../../resources/logo_sisap.png" height="161px"
-								width="175px" /></a>
+								src="../../resources/logo_sisap.png" height="80px" width="87px" /></a>
 						</center>
 					</p:layoutUnit>
 					<p:layoutUnit id="centerr" position="center">
 						<h:form>
 							<p:panelMenu style="width: 225px">
-								<p:submenu label="Atividade">
-									<p:menuitem value="Atendimento"
+								<p:submenu label="Atividades">
+									<p:menuitem value="Atendimentos"
 										outcome="/paginas/pedagogo/atendimento.xhtml" />
-									<p:menuitem value="Notificação"
+									<p:menuitem value="Notificações"
 										outcome="/paginas/pedagogo/buscarAlunoParaEnviarNotificacao.xhtml" />
-									<p:menuitem value="Reunião"
+									<p:menuitem value="Reuniões"
 										outcome="/paginas/pedagogo/reuniao.xhtml" />
-									<p:menuitem value="Visita Domiciliar"
+									<p:menuitem value="Visitas Domiciliares"
 										outcome="/paginas/pedagogo/buscarAlunoParaAgendarVisita.xhtml" />
 								</p:submenu>
 
@@ -89,19 +84,16 @@
 									<p:menuitem value="Relatório de Boletim" />
 								</p:submenu>
 
-								<p:submenu label="Sincronização">
-									<p:menuitem value="Realizar Sincronização" />
-									<p:menuitem value="Verificar Estado" />
-								</p:submenu>
 							</p:panelMenu>
 						</h:form>
 					</p:layoutUnit>
 
-					<p:layoutUnit id="bottomm" position="south">
+					<p:layoutUnit id="bottomm" position="north">
 						<center>
 							<h:form>
 								<p:button icon="ui-icon-comment" title="Notificações" />
 								<p:button icon="ui-icon-wrench" title="Ferramentas" />
+								<p:button icon="ui-icon-extlink" title="Sincronização" />
 								<p:button icon="ui-icon-extlink" title="Sair"
 									outcome="/paginas/login.xhtml" />
 							</h:form>
@@ -112,11 +104,6 @@
 
 			<p:layoutUnit id="center" position="center">
 				<p:layout>
-					<p:layoutUnit id="cima" position="north">
-						<h:form>
-							<p:link value="Home" />
-						</h:form>
-					</p:layoutUnit>
 					<p:layoutUnit id="centro" position="center">
 						<ui:insert name="center" />
 					</p:layoutUnit>
