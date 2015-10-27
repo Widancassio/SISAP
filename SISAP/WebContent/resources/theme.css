@@ -30,7 +30,7 @@
 }
 .ui-widget-content {
 	border: 1px solid #dfd9c3;
-	background: #e8e8e8 ;
+	background: #E9EAED ;
 	color: #312e25;
 }
 .ui-widget-content a {
@@ -38,7 +38,7 @@
 }
 .ui-widget-header {
 	border: 1px solid #d4ccb0;
-	background: #e8e8e8 ;
+	background: #E9EAED ;
 	color: #433f38;
 	font-weight: bold;
 }
