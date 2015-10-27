@@ -30,7 +30,7 @@
 }
 .ui-widget-content {
 	border: 1px solid #dfd9c3;
-	background: #E9EAED ;
+	background: #f5f3e5 url("images/ui-bg_flat_100_f5f3e5_40x100.png") 50% 50% repeat-x;
 	color: #312e25;
 }
 .ui-widget-content a {
@@ -38,7 +38,7 @@
 }
 .ui-widget-header {
 	border: 1px solid #d4ccb0;
-	background: #E9EAED ;
+	background: #ece8da url("images/ui-bg_flat_100_ece8da_40x100.png") 50% 50% repeat-x;
 	color: #433f38;
 	font-weight: bold;
 }
@@ -52,7 +52,7 @@
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid none;
-	background: #45619D ;
+	background: #215F8B url("images/ui-bg_diagonals-small_15_0073ea_40x40.png") 50% 50% repeat;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -69,9 +69,9 @@
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	border: 1px solid #ffffff;
-	background: #DCDEE3 ;
+	background: #3A97B5 url("images/ui-bg_diagonals-small_25_81bcfa_40x40.png") 50% 50% repeat;
 	font-weight: normal;
-	color: #000000;
+	color: #ffffff;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -87,8 +87,8 @@
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-	border: 1px solid #45619D;
-	background: #45619D ;
+	border: 1px solid #215F8B;
+	background: #215F8B url("images/ui-bg_diagonals-small_100_5da7f6_40x40.png") 50% 50% repeat;
 	font-weight: normal;
 	color: #ffffff;
 }
