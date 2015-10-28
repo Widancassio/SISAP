@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templateProfessor.xhtml">
+
+	<ui:define name="title">
+	SISAP - Meus Núcleos
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Listagem de Núcleos de Aprendizagem">
+				<p:dataTable var="nucleos" value="#{dtFilterView.cars}"
+					widgetVar="carsTable" emptyMessage="Nenhum registro encontrado"
+					filteredValue="#{dtFilterView.filteredCars}" rows="10"
+					paginator="true" rowsPerPageTemplate="5,10,15">>
+
+					<p:column filterBy="#" headerText="Disciplina">
+						<h:outputText value="disciplina" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Série">
+						<h:outputText value="serie" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Ano Letivo">
+						<h:outputText value="ano" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Curso">
+						<h:outputText value="curso" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Situação">
+						<h:outputText value="situacao" />
+					</p:column>
+
+					<p:column headerText="Alterar">
+						<h:button title="Alterar" icon="ui-icon-pencil" />
+					</p:column>
+
+					<p:column headerText="Frequência">
+						<h:button title="Frequência" icon="ui-icon-clipboard" />
+					</p:column>
+
+				</p:dataTable>
+
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

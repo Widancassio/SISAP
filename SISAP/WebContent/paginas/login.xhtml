@@ -24,16 +24,18 @@
 				</center>
 				<center>
 					<h:form>
-						<h:panelGrid columns="2" cellpadding="5">
+						<h:panelGrid id="camposLogin" columns="2" cellpadding="5">
 							<h:outputText value="Login: " />
-							<h:inputText id="login" />
+							<h:inputText id="login" value="#{usuario.login}" />
 
 							<h:outputText value="Senha: " />
-							<h:inputSecret id="senha" />
+							<h:inputSecret id="senha" value="#{usuario.senha}" />
 							<center>
 								<h:panelGrid columns="2" cellpadding="1">
-									<h:button value="Entrar" outcome="/paginas/index.xhtml" />
-									<h:button value="Limpar" />
+									<h:commandButton value="Entrar"
+										action="#{usuario.efetuarLogin}" />
+									<h:commandButton value="Limpar" update="camposLogin"
+										process="@this" />
 								</h:panelGrid>
 							</center>
 						</h:panelGrid>
