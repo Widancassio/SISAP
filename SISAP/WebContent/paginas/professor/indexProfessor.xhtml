@@ -10,53 +10,22 @@
 <ui:composition template="/templates/templateProfessor.xhtml">
 
 	<ui:define name="title">
-	SISAP - Meus Núcleos
+	SISAP - Bem Vindo
 	</ui:define>
 
 	<ui:define name="center">
 
 		<p:growl id="messages" autoUpdate="true" showDetail="true"
 			showSummary="true" />
-
-		<h:form>
-			<p:fieldset legend="Listagem de Núcleos de Aprendizagem">
-				<p:dataTable var="nucleos" value="#{dtFilterView.cars}"
-					widgetVar="carsTable" emptyMessage="Nenhum registro encontrado"
-					filteredValue="#{dtFilterView.filteredCars}" rows="10"
-					paginator="true" rowsPerPageTemplate="5,10,15">>
-
-					<p:column filterBy="#" headerText="Disciplina">
-						<h:outputText value="disciplina" />
-					</p:column>
-
-					<p:column filterBy="#" headerText="Série">
-						<h:outputText value="serie" />
-					</p:column>
-
-					<p:column filterBy="#" headerText="Ano Letivo">
-						<h:outputText value="ano" />
-					</p:column>
-
-					<p:column filterBy="#" headerText="Curso">
-						<h:outputText value="curso" />
-					</p:column>
-
-					<p:column filterBy="#" headerText="Situação">
-						<h:outputText value="situacao" />
-					</p:column>
-
-					<p:column headerText="Alterar">
-						<h:button title="Alterar" icon="ui-icon-pencil" />
-					</p:column>
-
-					<p:column headerText="Frequência">
-						<h:button title="Frequência" icon="ui-icon-clipboard" />
-					</p:column>
-
-				</p:dataTable>
-
-			</p:fieldset>
-		</h:form>
+		<center>
+			<h:panelGrid style="width : 25%; text-align : center">
+				<p:spacer height=" 10px" />
+				<center>
+					<img src="../../resources/logo_sisap.png" height="427px"
+						width="500px" />
+				</center>
+			</h:panelGrid>
+		</center>
 	</ui:define>
 
 </ui:composition>
