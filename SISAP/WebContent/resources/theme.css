@@ -15,17 +15,17 @@
 ----------------------------------*/
 .ui-widget {
 	font-family: segoe ui, Arial, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 .ui-widget .ui-widget {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button
 	{
 	font-family: segoe ui, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 }
 /* cor antiga #f5f3e5 */
 .ui-widget-content {
