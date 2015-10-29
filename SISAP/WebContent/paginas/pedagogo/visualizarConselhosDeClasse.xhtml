@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Visualizar Conselhos de Classe
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Listagem de  Conselhos de Classe">
+				<br />
+				<h:button value="Novo Conselho de Classe"
+					outcome="/paginas/pedagogo/novoConselhoDeClasse.xhtml" />
+				<p:dataTable var="nucleos" value="#{dtFilterView.cars}"
+					widgetVar="carsTable" emptyMessage="Nenhum registro encontrado"
+					filteredValue="#{dtFilterView.filteredCars}" rows="10"
+					paginator="true" rowsPerPageTemplate="5,10,15">>
+
+					<p:column filterBy="#" headerText="Data">
+						<h:outputText value="data" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Tipo">
+						<h:outputText value="tipo" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Solicitante">
+						<h:outputText value="solicitante" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Visualizar">
+						<h:outputText value="visualizar" />
+					</p:column>
+
+				</p:dataTable>
+
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

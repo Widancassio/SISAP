@@ -20,6 +20,10 @@
 
 		<h:form>
 			<p:fieldset legend="Diário Pessoal (Atividades Registradas)">
+				<br />
+				<h:button value="Nova Atividade Avulsa"
+					outcome="/paginas/pedagogo/novoRegistroNoDiarioPessoal.xhtml" />
+				<h:button value="Gerar Relatório" />
 				<p:dataTable var="diario" value="#{dtFilterView.cars}"
 					widgetVar="diario" emptyMessage="Nenhum registro encontrado"
 					filteredValue="#{dtFilterView.filteredCars}" rows="10"

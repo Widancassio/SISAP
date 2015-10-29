@@ -10,7 +10,7 @@
 <ui:composition template="/templates/templatePedagogo.xhtml">
 
 	<ui:define name="title">
-	SISAP - Visita Domiciliar
+	SISAP - Agendar Atividade
 	</ui:define>
 
 	<ui:define name="center">
@@ -19,56 +19,48 @@
 			showSummary="true" />
 
 		<h:form>
-			<p:fieldset legend="Visita Domiciliar">
-				<h:panelGrid id="campos" columns="2">
+			<p:fieldset legend="Agendar Atividade">
+				<h:panelGrid id="camposCadastro" columns="2">
 
-					<h:outputText value="Nome do aluno:" />
-					<h:outputText value="(nome completo buscado anteriormente)" />
+					<h:outputText value="Data de Agendamento: *" />
+					<p:calendar id="agendamento" />
 
 				</h:panelGrid>
 
-				<br />
-
-				<h:panelGrid id="camposVisita" columns="4">
-
-					<h:outputText value="Data de Agendamento: *" />
-					<p:calendar id="agenda" />
-
-					<h:outputText value="Data de Finalização: *" />
-					<p:calendar id="final" />
+				<h:panelGrid id="camposCadastro2" columns="4" style="width:80%">
 
 					<h:outputText value="Descrição: *" />
 					<h:inputTextarea rows="3" cols="45" maxlength="10"
 						autoResize="true" />
 
-					<h:outputText value="Motivo: *" />
-					<h:inputTextarea rows="3" cols="45" maxlength="10"
-						autoResize="true" />
+					<h:outputText value="Solicitante: *" />
+					<h:inputText id="solicitante" style="width:250px" />
 
-					<h:outputText value="Análise: *" />
-					<h:inputTextarea rows="3" cols="45" maxlength="10"
-						autoResize="true" />
+				</h:panelGrid>
 
-					<h:outputText value="Estado: *" />
+				<h:panelGrid id="camposCadastro3" columns="2">
+
+					<h:outputText value="Ação/Tipo de Atividade: *" />
 					<h:selectOneMenu id="estado" value="#{selectOneMenuView.console}"
 						style="width:175px">
 						<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
-						<f:selectItem itemLabel="Agendada" itemValue="setor1" />
-						<f:selectItem itemLabel="Concluída" itemValue="setor2" />
-						<f:selectItem itemLabel="Cancelada" itemValue="setor3" />
-						<f:selectItem itemLabel="Encaminhada" itemValue="setor4" />
-						<f:selectItem itemLabel="Em andamento" itemValue="setor5" />
+						<f:selectItem itemLabel="Atendimento" itemValue="atv1" />
+						<f:selectItem itemLabel="Notificação" itemValue="atv2" />
+						<f:selectItem itemLabel="Reunião" itemValue="atv3" />
+						<f:selectItem itemLabel="Visita Domiciliar" itemValue="atv4" />
 					</h:selectOneMenu>
 
 					<br />
 					<br />
 
 					<f:facet name="footer">
-						<h:button value="Salvar" icon="ui-icon-search" />
+						<h:button value="Agendar" icon="ui-icon-search" />
 
 						<h:commandButton id="limparBotao" value="Limpar"
-							update="camposVisita" process="@this" icon="ui-icon-close">
-							<p:resetInput target="camposVisita" />
+							update="camposCadastro, camposCadastro2, camposCadastro3"
+							process="@this" icon="ui-icon-close">
+							<p:resetInput
+								target="camposCadastro, camposCadastro2, camposCadastro3" />
 						</h:commandButton>
 						<h:button value="Cancelar"
 							outcome="/paginas/pedagogo/indexPedagogo.xhtml"

@@ -33,15 +33,22 @@
 			<p:layoutUnit id="left" position="west" size="260" resizable="false"
 				closable="false" collapsible="true" minSize="200">
 				<p:layout>
-					<p:layoutUnit id="topp" position="south">
+
+					<p:layoutUnit id="bottomm" position="north">
 						<center>
-							<img src="../../resources/logo_sisap.png" height="80px"
-								width="87px" />
+							<h:form>
+								<p:button icon="ui-icon-comment" title="Notificações" />
+								<p:button icon="ui-icon-extlink" title="Sair"
+									outcome="/paginas/login.xhtml" />
+								<br />
+								<p:outputLabel style="font-size:10px" value="Professor Logado" />
+							</h:form>
 						</center>
 					</p:layoutUnit>
+
 					<p:layoutUnit id="centerr" position="center">
 						<h:form>
-							<p:panelMenu style="width: 225px">
+							<p:panelMenu style="width: 100%">
 								<p:submenu label="Núcleo de Aprendizagem">
 									<p:menuitem value="Novo"
 										outcome="/paginas/professor/cadastroNucleoDeAprendizagem.xhtml" />
@@ -52,13 +59,11 @@
 						</h:form>
 					</p:layoutUnit>
 
-					<p:layoutUnit id="bottomm" position="north">
+
+					<p:layoutUnit id="topp" position="south">
 						<center>
-							<h:form>
-								<p:button icon="ui-icon-comment" title="Notificações" />
-								<p:button icon="ui-icon-extlink" title="Sair"
-									outcome="/paginas/login.xhtml" />
-							</h:form>
+							<img src="../../resources/logo_sisap.png" height="110px"
+								width="120px" />
 						</center>
 					</p:layoutUnit>
 				</p:layout>
@@ -69,16 +74,17 @@
 					<p:layoutUnit id="centro" position="center">
 						<ui:insert name="center" />
 					</p:layoutUnit>
+
+					<p:layoutUnit id="bottom" position="south" size="45">
+						<center>
+							Instituto Federal de Educação Ciência e Tecnologia da Paraíba -
+							Campus Monteiro<br />Análise e Desenvolvimento de Sistemas -
+							2012.2
+						</center>
+					</p:layoutUnit>
 				</p:layout>
 			</p:layoutUnit>
 
-			<p:layoutUnit id="bottom" position="south" size="60">
-				<center>
-					Instituto Federal de Educação Ciência e Tecnologia da Paraíba -
-					Campus Monteiro<br />Análise e Desenvolvimento de Sistemas -
-					2012.2
-				</center>
-			</p:layoutUnit>
 		</p:layout>
 
 	</h:body>

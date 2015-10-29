@@ -33,60 +33,6 @@
 			<p:layoutUnit id="left" position="west" size="260" resizable="false"
 				closable="false" collapsible="true" minSize="200">
 				<p:layout>
-					<p:layoutUnit id="topp" position="south">
-						<center>
-							<a href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml"><img
-								src="../../resources/logo_sisap.png" height="80px" width="87px" /></a>
-						</center>
-					</p:layoutUnit>
-					<p:layoutUnit id="centerr" position="center">
-						<h:form>
-							<p:panelMenu style="width: 225px">
-								<p:submenu label="Atividades">
-									<p:menuitem value="Atendimentos"
-										outcome="/paginas/pedagogo/atendimento.xhtml" />
-									<p:menuitem value="Notificações"
-										outcome="/paginas/pedagogo/buscarAlunoParaEnviarNotificacao.xhtml" />
-									<p:menuitem value="Reuniões"
-										outcome="/paginas/pedagogo/reuniao.xhtml" />
-									<p:menuitem value="Visitas Domiciliares"
-										outcome="/paginas/pedagogo/buscarAlunoParaAgendarVisita.xhtml" />
-								</p:submenu>
-
-								<p:submenu label="Diário Pessoal">
-									<p:menuitem value="Registrar"
-										outcome="/paginas/pedagogo/novoRegistroNoDiarioPessoal.xhtml" />
-									<p:menuitem value="Visualizar Diário"
-										outcome="/paginas/pedagogo/visualizarDiario.xhtml" />
-									<p:menuitem value="Relatório Pessoal"
-										outcome="/paginas/pedagogo/gerarRelatorioDeDiarioPessoal.xhtml" />
-								</p:submenu>
-
-								<p:submenu label="Conselho de Classe">
-									<p:menuitem value="Participar"
-										outcome="/paginas/pedagogo/participarDoConselho.xhtml" />
-								</p:submenu>
-
-								<p:submenu label="Núcleo de Aprendizagem">
-									<p:menuitem value="Visualizar Núcleos"
-										outcome="/paginas/pedagogo/visualizarNucleos.xhtml" />
-									<p:menuitem value="Relatório de Núcleo" />
-								</p:submenu>
-
-								<p:submenu label="Setor Institucional">
-									<p:menuitem value="Cadastrar"
-										outcome="/paginas/pedagogo/cadastroDeSetor.xhtml" />
-									<p:menuitem value="Visualizar Setores" />
-								</p:submenu>
-
-								<p:submenu label="Boletim do Aluno">
-									<p:menuitem value="Visualizar Boletim" />
-									<p:menuitem value="Relatório de Boletim" />
-								</p:submenu>
-
-							</p:panelMenu>
-						</h:form>
-					</p:layoutUnit>
 
 					<p:layoutUnit id="bottomm" position="north">
 						<center>
@@ -100,6 +46,52 @@
 							</h:form>
 						</center>
 					</p:layoutUnit>
+
+					<p:layoutUnit id="centerr" position="center">
+						<h:form>
+							<p:panelMenu style="width: 100%">
+								<p:submenu label="Acompanhamento Pedagógico">
+									<p:menuitem value="Agendar Atividade"
+										outcome="/paginas/pedagogo/agendarAtividade.xhtml" />
+									<p:menuitem value="Atendimentos"
+										outcome="/paginas/pedagogo/atendimento.xhtml" />
+									<p:menuitem value="Diário Pessoal"
+										outcome="/paginas/pedagogo/visualizarDiario.xhtml" />
+									<p:menuitem value="Notificações"
+										outcome="/paginas/pedagogo/buscarAlunoParaEnviarNotificacao.xhtml" />
+									<p:menuitem value="Reuniões"
+										outcome="/paginas/pedagogo/reuniao.xhtml" />
+									<p:menuitem value="Visitas Domiciliares"
+										outcome="/paginas/pedagogo/buscarAlunoParaAgendarVisita.xhtml" />
+								</p:submenu>
+
+								<p:submenu label="Conselho De Classe">
+									<p:menuitem value="Listar"
+										outcome="/paginas/pedagogo/visualizarConselhosDeClasse.xhtml" />
+								</p:submenu>
+
+								<p:submenu label="Núcleo de Aprendizagem">
+									<p:menuitem value="Visualizar Núcleos"
+										outcome="/paginas/pedagogo/visualizarNucleos.xhtml" />
+									<p:menuitem value="Relatório de Núcleo" />
+								</p:submenu>
+
+								<p:submenu label="Boletim do Aluno">
+									<p:menuitem value="Visualizar Boletim" />
+									<p:menuitem value="Relatório de Boletim" />
+								</p:submenu>
+							</p:panelMenu>
+						</h:form>
+					</p:layoutUnit>
+
+					<p:layoutUnit id="topp" position="south">
+						<center>
+							<a
+								href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml"><img
+								src="../../resources/logo_sisap.png" height="110px"
+								width="120px" /></a>
+						</center>
+					</p:layoutUnit>
 				</p:layout>
 			</p:layoutUnit>
 
@@ -108,15 +100,15 @@
 					<p:layoutUnit id="centro" position="center">
 						<ui:insert name="center" />
 					</p:layoutUnit>
-				</p:layout>
-			</p:layoutUnit>
 
-			<p:layoutUnit id="bottom" position="south" size="60">
-				<center>
-					Instituto Federal de Educação Ciência e Tecnologia da Paraíba -
-					Campus Monteiro<br />Análise e Desenvolvimento de Sistemas -
-					2012.2
-				</center>
+					<p:layoutUnit id="bottom" position="south" size="45">
+						<center>
+							Instituto Federal de Educação Ciência e Tecnologia da Paraíba -
+							Campus Monteiro<br />Análise e Desenvolvimento de Sistemas -
+							2012.2
+						</center>
+					</p:layoutUnit>
+				</p:layout>
 			</p:layoutUnit>
 
 		</p:layout>

@@ -1,14 +1,13 @@
 package br.com.sisap.controller;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 
 @ManagedBean(name = "usuario")
-@RequestScoped
-public class Usuario {
+@ViewScoped
+public class Usuario extends ClasseAbstrata {
 
-	private String login;
-	private String senha;
+	private String login, senha;
 
 	public String efetuarLogin() {
 		if (login.equals(Enderecos.PEDAGOGO) && senha.equals(Enderecos.SENHA)) {
@@ -17,7 +16,8 @@ public class Usuario {
 				&& senha.equals(Enderecos.SENHA)) {
 			return Enderecos.PAGINA_INICIAL_PROFESSOR;
 		}
-		return Enderecos.PAGINA_LOGIN;
+		reportarMensagemDeErro("Campos inválidos!");
+		return null;
 	}
 
 	public String getLogin() {
@@ -35,4 +35,5 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
 }
