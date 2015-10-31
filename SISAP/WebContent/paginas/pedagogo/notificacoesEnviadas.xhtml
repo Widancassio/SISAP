@@ -20,6 +20,10 @@
 
 		<h:form>
 			<p:fieldset legend="Notificações Enviadas">
+				<br />
+				<h:button value="Enviar Notificação"
+					outcome="/paginas/pedagogo/buscarAlunoParaEnviarNotificacao.xhtml" />
+
 				<p:dataTable var="notificacoes" value="#{dtFilterView.cars}"
 					widgetVar="notificacoes" emptyMessage="Nenhum registro encontrado"
 					filteredValue="#{dtFilterView.filteredCars}" rows="10"
