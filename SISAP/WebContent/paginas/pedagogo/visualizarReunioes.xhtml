@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/templatePedagogo.xhtml">
+
+	<ui:define name="title">
+	SISAP - Visualizar Reuniões
+	</ui:define>
+
+	<ui:define name="center">
+
+		<p:growl id="messages" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+
+		<h:form>
+			<p:fieldset legend="Listagem de Reuniões">
+				<br />
+				<h:button value="Nova Reunião"
+					outcome="/paginas/pedagogo/reuniao.xhtml" />
+
+				<p:dataTable var="reunioes" value="#{dtFilterView.cars}"
+					widgetVar="carsTable" emptyMessage="Nenhum registro encontrado"
+					filteredValue="#{dtFilterView.filteredCars}" rows="10"
+					paginator="true" rowsPerPageTemplate="5,10,15">>
+
+					<p:column filterBy="#{data.a}" headerText="Data de Agendamento">
+						<h:outputText value="dataDeAgendamento" />
+					</p:column>
+
+					<p:column filterBy="#{data.a}" headerText="Data de Finalização">
+						<h:outputText value="dataDeFinalizacao" />
+					</p:column>
+
+					<p:column filterBy="#{data.a}" headerText="Solicitante">
+						<h:outputText value="solicitante" />
+					</p:column>
+
+					<p:column filterBy="#{data.a}" headerText="Estado">
+						<f:facet name="filter">
+							<h:selectOneMenu id="itens">
+								<f:selectItem itemLabel="----- Selecione ------" itemValue="" />
+								<f:selectItem itemLabel="Agendado" itemValue="agendado" />
+								<f:selectItem itemLabel="Iniciado" itemValue="iniciado" />
+								<f:selectItem itemLabel="Concluído" itemValue="concluido" />
+								<f:selectItem itemLabel="Cancelado" itemValue="cancelado" />
+							</h:selectOneMenu>
+						</f:facet>
+						<h:outputText value="estado" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Parecer">
+						<h:outputText value="parecer" />
+					</p:column>
+
+					<p:column filterBy="#" headerText="Alterar">
+						<h:outputText value="alterar" />
+					</p:column>
+
+				</p:dataTable>
+
+			</p:fieldset>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
