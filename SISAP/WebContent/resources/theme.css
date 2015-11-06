@@ -14,7 +14,7 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-	font-family: segoe ui, Arial, sans-serif;
+	font-family: Arial;
 	font-size: 11px;
 }
 
@@ -24,12 +24,12 @@
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button
 	{
-	font-family: segoe ui, Arial, sans-serif;
+	font-family: Arial;
 	font-size: 12px;
 }
 /* cor antiga #f5f3e5 */
 .ui-widget-content {
-	border: 1px solid #dfd9c3;
+	border: 0px solid #dfd9c3;
 	background: #f3f3f3;
 	color: #312e25;
 }
@@ -38,11 +38,15 @@
 	color: #312e25;
 }
 
+.menuItemActive {
+	background: red;
+}
+
 .ui-widget-header {
 	border: 1px solid #d4ccb0;
-	background: #f3f3f3;
+	/*background: #f3f3f3;*/
 	color: #433f38;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .ui-widget-header a {
