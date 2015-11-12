@@ -55,7 +55,7 @@
 	border: 0px;
 	background: #215F8B
 		url("images/ui-bg_diagonals-small_15_0073ea_40x40.png") 50% 50% repeat;
-	font-weight: normal, bold;
+	font-weight: normal;
 	text-shadow: none;
 	color: #ffffff;
 }
@@ -95,6 +95,7 @@
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
 	{
 	color: #ffffff;
+	font-weight: bold;
 }
 
 /* Interaction Cues
