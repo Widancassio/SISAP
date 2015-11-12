@@ -27,87 +27,80 @@
 	</h:head>
 
 	<h:body>
-
 		<p:layout fullPage="true">
+			<p:layoutUnit position="north">
+				<h:form>
+					<p:growl id="messages" showDetail="true" />
+					<p:toolbar>
+						<f:facet name="right">
+							<h:outputLabel>Pedagogo Logado</h:outputLabel>
 
-			<p:layoutUnit id="left" position="west" size="260" resizable="false"
-				closable="false" collapsible="true" minSize="200">
-				<p:layout>
+							<span class="ui-separator"> <span
+								class="ui-icon ui-icon-grip-dotted-vertical" />
+							</span>
+							<p:button title="Notificações" icon="ui-icon-comment" />
+							<p:button title="Sincronização" icon="ui-icon-refresh" />
+							<p:button title="Sair" icon="ui-icon-extlink"
+								outcome="/paginas/login.xhtml" />
+						</f:facet>
 
-					<p:layoutUnit id="bottomm" position="north">
-						<div style="float: left;">
-							<h:form style="padding : 10px">
-								<h:graphicImage
-									href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml">
-									<img src="../../resources/logo.png" height="68px" width="70px" />
-								</h:graphicImage>
-							</h:form>
-						</div>
-						<div style="float: left; padding: 10px">
-							<h:form>
-								<p:button icon="ui-icon-comment" title="Notificações" />
-								<p:button icon="ui-icon-refresh" title="Sincronização" />
-								<p:button icon="ui-icon-extlink" title="Sair"
-									outcome="/paginas/login.xhtml" />
-								<br />
-								<p:outputLabel style="font-size:10px" value="Pedagogo Logado" />
-							</h:form>
-						</div>
-					</p:layoutUnit>
+					</p:toolbar>
+				</h:form>
+			</p:layoutUnit>
 
-					<p:layoutUnit id="centerr" position="center">
-						<h:form>
-							<p:panelMenu style="width: 100%">
-								<p:submenu label="Acompanhamento Pedagógico">
-									<p:menuitem id="menu1" value="Agendar Atividade"
-										outcome="/paginas/pedagogo/agendarAtividade.xhtml"
-										styleClass="#{'menu1' == page.viewId ? 'menuItemActive' : ''}" />
-									<p:menuitem value="Diário Pessoal"
-										outcome="/paginas/pedagogo/visualizarDiario.xhtml" />
-									<p:menuitem value="Atendimentos"
-										outcome="/paginas/pedagogo/visualizarAtendimentos.xhtml" />
-									<p:menuitem value="Notificações"
-										outcome="/paginas/pedagogo/notificacoesEnviadas.xhtml" />
-									<p:menuitem value="Reuniões"
-										outcome="/paginas/pedagogo/visualizarReunioes.xhtml" />
-									<p:menuitem value="Visitas Domiciliares"
-										outcome="/paginas/pedagogo/visualizarVisitas.xhtml" />
-								</p:submenu>
+			<p:layoutUnit position="west" size="260" header="MENU"
+				resizable="false" closable="false" collapsible="true">
 
-								<p:submenu label="Conselho De Classe">
-									<p:menuitem value="Listar"
-										outcome="/paginas/pedagogo/visualizarConselhosDeClasse.xhtml" />
-								</p:submenu>
+				<h:form style="padding : 10px">
+					<center>
+						<h:graphicImage
+							href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml">
+							<img src="../../resources/logo.png" height="70px" width="68px" />
+						</h:graphicImage>
+					</center>
+				</h:form>
 
-								<p:submenu label="Núcleo de Aprendizagem">
-									<p:menuitem value="Visualizar Núcleos"
-										outcome="/paginas/pedagogo/visualizarNucleos.xhtml" />
-									<p:menuitem value="Relatório de Núcleo" />
-								</p:submenu>
+				<h:form>
+					<p:panelMenu style="width: 100%">
+						<p:submenu label="Acompanhamento Pedagógico">
+							<p:menuitem id="menu1" value="Agendar Atividade"
+								outcome="/paginas/pedagogo/agendarAtividade.xhtml"
+								styleClass="#{'menu1' == page.viewId ? 'menuItemActive' : ''}" />
+							<p:menuitem value="Diário Pessoal"
+								outcome="/paginas/pedagogo/visualizarDiario.xhtml" />
+							<p:menuitem value="Atendimentos"
+								outcome="/paginas/pedagogo/visualizarAtendimentos.xhtml" />
+							<p:menuitem value="Notificações"
+								outcome="/paginas/pedagogo/notificacoesEnviadas.xhtml" />
+							<p:menuitem value="Reuniões"
+								outcome="/paginas/pedagogo/visualizarReunioes.xhtml" />
+							<p:menuitem value="Visitas Domiciliares"
+								outcome="/paginas/pedagogo/visualizarVisitas.xhtml" />
+						</p:submenu>
 
-								<p:submenu label="Boletim do Aluno">
-									<p:menuitem value="Visualizar Boletim" />
-									<p:menuitem value="Relatório de Boletim" />
-								</p:submenu>
-							</p:panelMenu>
-						</h:form>
-					</p:layoutUnit>
+						<p:submenu label="Conselho De Classe">
+							<p:menuitem value="Listar"
+								outcome="/paginas/pedagogo/visualizarConselhosDeClasse.xhtml" />
+						</p:submenu>
 
-				</p:layout>
+						<p:submenu label="Núcleo de Aprendizagem">
+							<p:menuitem value="Visualizar Núcleos"
+								outcome="/paginas/pedagogo/visualizarNucleos.xhtml" />
+							<p:menuitem value="Relatório de Núcleo" />
+						</p:submenu>
+
+						<p:submenu label="Boletim do Aluno">
+							<p:menuitem value="Visualizar Boletim" />
+							<p:menuitem value="Relatório de Boletim" />
+						</p:submenu>
+					</p:panelMenu>
+				</h:form>
+
 			</p:layoutUnit>
 
 			<p:layoutUnit id="center" position="center">
-				<p:layout>
-					<p:layoutUnit id="centro" position="center">
-						<ui:insert name="center" />
-					</p:layoutUnit>
-
-					<p:layoutUnit id="bottom" position="south" size="45">
-
-					</p:layoutUnit>
-				</p:layout>
+				<ui:insert name="center" />
 			</p:layoutUnit>
-
 		</p:layout>
 
 	</h:body>
