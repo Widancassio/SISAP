@@ -55,12 +55,14 @@
 	border: 0px;
 	background: #215F8B
 		url("images/ui-bg_diagonals-small_15_0073ea_40x40.png") 50% 50% repeat;
-	font-weight: normal;
+	font-weight: normal, bold;
+	text-shadow: none;
 	color: #ffffff;
 }
 
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited
 	{
+	text-shadow: none;
 	color: #ffffff;
 }
 
