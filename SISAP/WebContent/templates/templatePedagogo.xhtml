@@ -32,6 +32,12 @@
 				<h:form>
 					<p:growl id="messages" showDetail="true" />
 					<p:toolbar>
+						<f:facet name="left">
+							<a
+								href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml">
+								<img src="../../resources/logo.png" height="30px" width="26px" />
+							</a>
+						</f:facet>
 						<f:facet name="right">
 							<h:outputLabel>Pedagogo Logado</h:outputLabel>
 
@@ -51,17 +57,8 @@
 			<p:layoutUnit position="west" size="260" header="MENU"
 				resizable="false" closable="false" collapsible="true">
 
-				<h:form style="padding : 10px">
-					<center>
-						<h:graphicImage
-							href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml">
-							<img src="../../resources/logo.png" height="70px" width="68px" />
-						</h:graphicImage>
-					</center>
-				</h:form>
-
 				<h:form>
-					<p:panelMenu style="width: 100%">
+					<p:menu style="width: 100%" toggleable="true">
 						<p:submenu label="Acompanhamento Pedagógico">
 							<p:menuitem id="menu1" value="Agendar Atividade"
 								outcome="/paginas/pedagogo/agendarAtividade.xhtml"
@@ -93,7 +90,7 @@
 							<p:menuitem value="Visualizar Boletim" />
 							<p:menuitem value="Relatório de Boletim" />
 						</p:submenu>
-					</p:panelMenu>
+					</p:menu>
 				</h:form>
 
 			</p:layoutUnit>

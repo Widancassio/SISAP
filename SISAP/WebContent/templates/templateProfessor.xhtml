@@ -27,64 +27,50 @@
 	</h:head>
 
 	<h:body>
-
 		<p:layout fullPage="true">
+			<p:layoutUnit position="north">
+				<h:form>
+					<p:growl id="messages" showDetail="true" />
+					<p:toolbar>
+						<f:facet name="left">
+							<a
+								href="http://localhost:8080/SISAP/faces/paginas/pedagogo/indexPedagogo.xhtml">
+								<img src="../../resources/logo.png" height="30px" width="26px" />
+							</a>
+						</f:facet>
+						<f:facet name="right">
+							<h:outputLabel>Professor Logado</h:outputLabel>
 
-			<p:layoutUnit id="left" position="west" size="260" resizable="false"
-				closable="false" collapsible="true" minSize="200">
-				<p:layout>
+							<span class="ui-separator"> <span
+								class="ui-icon ui-icon-grip-dotted-vertical" />
+							</span>
+							<p:button title="Notificações" icon="ui-icon-comment" />
+							<p:button title="Sair" icon="ui-icon-extlink"
+								outcome="/paginas/login.xhtml" />
+						</f:facet>
 
-					<p:layoutUnit id="bottomm" position="north">
-						<center>
-							<h:form>
-								<p:button icon="ui-icon-comment" title="Notificações" />
-								<p:button icon="ui-icon-extlink" title="Sair"
-									outcome="/paginas/login.xhtml" />
-								<br />
-								<p:outputLabel style="font-size:10px" value="Professor Logado" />
-							</h:form>
-						</center>
-					</p:layoutUnit>
-
-					<p:layoutUnit id="centerr" position="center">
-						<h:form>
-							<p:panelMenu style="width: 100%">
-								<p:submenu label="Núcleo de Aprendizagem">
-									<p:menuitem value="Novo"
-										outcome="/paginas/professor/cadastroNucleoDeAprendizagem.xhtml" />
-									<p:menuitem value="Meus Núcleos"
-										outcome="/paginas/professor/meusNucleos.xhtml" />
-								</p:submenu>
-							</p:panelMenu>
-						</h:form>
-					</p:layoutUnit>
-
-
-					<p:layoutUnit id="topp" position="south">
-						<center>
-							<img src="../../resources/logo_sisap.png" height="110px"
-								width="120px" />
-						</center>
-					</p:layoutUnit>
-				</p:layout>
+					</p:toolbar>
+				</h:form>
 			</p:layoutUnit>
+
+			<p:layoutUnit position="west" size="260" header="MENU"
+				resizable="false" closable="false" collapsible="true">
+				<h:form>
+					<p:menu style="width: 100%" toggleable="true">
+						<p:submenu label="Núcleo de Aprendizagem">
+							<p:menuitem value="Novo"
+								outcome="/paginas/professor/cadastroNucleoDeAprendizagem.xhtml" />
+							<p:menuitem value="Meus Núcleos"
+								outcome="/paginas/professor/meusNucleos.xhtml" />
+						</p:submenu>
+					</p:menu>
+				</h:form>
+			</p:layoutUnit>
+
 
 			<p:layoutUnit id="center" position="center">
-				<p:layout>
-					<p:layoutUnit id="centro" position="center">
-						<ui:insert name="center" />
-					</p:layoutUnit>
-
-					<p:layoutUnit id="bottom" position="south" size="45">
-						<center>
-							Instituto Federal de Educação Ciência e Tecnologia da Paraíba -
-							Campus Monteiro<br />Análise e Desenvolvimento de Sistemas -
-							2012.2
-						</center>
-					</p:layoutUnit>
-				</p:layout>
+				<ui:insert name="center" />
 			</p:layoutUnit>
-
 		</p:layout>
 
 	</h:body>

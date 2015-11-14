@@ -66,6 +66,17 @@
 	color: #ffffff;
 }
 
+.ui-menu.ui-menu-toggleable li.ui-widget-header {
+	background: #215F8B;
+	color: #ffffff;
+	border: none;
+	text-shadow: none;
+}
+
+.ui-menu .ui-menuitem-link {
+	border: none;
+}
+
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover,
 	.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
 	{
@@ -74,6 +85,10 @@
 		url("images/ui-bg_diagonals-small_25_81bcfa_40x40.png") 50% 50% repeat;
 	font-weight: normal, bold;
 	color: #ffffff;
+}
+
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td {
+	border-width: 0px
 }
 
 .ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link,
@@ -176,7 +191,7 @@
 }
 
 .ui-widget-header .ui-icon {
-	background-image: url("images/ui-icons_847e71_256x240.png");
+	background-image: url("images/ui-icons_ffffff_256x240.png");
 }
 
 .ui-state-default .ui-icon {
