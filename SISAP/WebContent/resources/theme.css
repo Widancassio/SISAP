@@ -82,6 +82,10 @@
 	color: #ffffff;
 }
 
+.ui-menuitem-link ui-corner-all {
+	border: 0px;
+}
+
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active
 	{
 	border: 0px;
@@ -95,6 +99,10 @@
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
 	{
 	color: #ffffff;
+}
+
+.ui-panelmenu .ui-menuitem-link {
+	border: none;
 }
 
 /* Interaction Cues
