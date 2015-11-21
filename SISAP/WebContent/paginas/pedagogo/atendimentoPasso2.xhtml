@@ -30,7 +30,7 @@
 						<f:selectItem itemLabel="Não" itemValue="Nao" />
 					</h:selectOneRadio>
 
-					<h:panelGrid id="selecionarSetor" columns="2">
+					<h:panelGrid id="selecionarSetor" columns="3">
 						<h:outputText value="Setor: *" />
 
 						<h:selectOneMenu id="setor" value="#{selectOneMenuView.console}"
@@ -40,7 +40,16 @@
 							<f:selectItem itemLabel="Setor 2" itemValue="setor2" />
 							<f:selectItem itemLabel="Setor 3" itemValue="setor3" />
 						</h:selectOneMenu>
+
+						<p:commandButton value="add" type="button"
+							onclick="PF('dlg2').show();" />
+
 					</h:panelGrid>
+
+					<p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true"
+						height="100">
+						<h:outputText value="Caixa de diálogo" />
+					</p:dialog>
 
 					<h:button value="Encaminhar e notificar setor" />
 
